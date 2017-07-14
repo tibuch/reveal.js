@@ -326,7 +326,7 @@ body {
   pointer-events: none;
   overflow: visible;
   z-index: 1;
-  text-align: center;
+  text-align: left;
   -webkit-perspective: 600px;
           perspective: 600px;
   -webkit-perspective-origin: 50% 40%;
@@ -1217,7 +1217,7 @@ body {
   left: 0;
   top: 45%;
   width: 100%;
-  text-align: center;
+  text-align: left;
   letter-spacing: normal; }
 
 .reveal .overlay.overlay-preview .x-frame-error {
