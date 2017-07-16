@@ -255,10 +255,10 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <h4>Regularization Terms</h4>
        <div id="left">
 	 <p>Total Variation [<a href="#/references">ROF92</a>]:</p>
-	 <span><p style="font-size:100%;">$$TV(u) := \|\nabla
-	   u\|_{2,1}$$</p></span>
+	 <span><p style="font-size:100%;">$$TV(u) := \min_u \{\|\nabla
+	   u\|_{2,1}\}$$</p></span>
 	 <ul>
-	   <li class="fragment" data-fragment-index="1"> Piece-wise consistency.</li>
+	   <li class="fragment" data-fragment-index="1">Piece-wise consistency.</li>
 	   <li class="fragment" data-fragment-index="3">Stair-casing artifacts.</li>
 	 </ul>
        </div>
@@ -302,7 +302,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				      style="position:absolute;top:188px;left:244px;" />
 	   <div class="fragment" data-fragment-index="2" width="488px"
 	 style="position:absolute;top:368px;left:5px;font-size:large;width:478px"><p>Figure
-	 x: A reconstruction result with TV as regularization term plotted as a
+	 x: A reconstruction result with TV-Huber as regularization term plotted as a
 	 surface, where the gray-scale intensity is represented by the height.
 	 In the bottom right corner the underlying ground truth with smooth
 	 intensity transitions.</p></div>
@@ -313,21 +313,25 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <h4>Regularization Terms</h4>
        <div id="left"> 
 	 <p>Total Generalized Variation [<a href="#/references">BKL</a>]:</p>
+	 <span><p style="font-size:45%">$$TGV^2(u) := \min_{u, w} \{ \alpha \|\nabla u - w\|_{2,1} +
+	   \beta \|Dw\|_{2,1}\}$$</p></span>
 	 <ul>
-	   <li>$TV(u) := \|\nabla u\|_{2,1}$ </li>
-	   <li class="fragment" data-fragment-index="1"> Piece-wise consistency.</li>
-	   <li class="fragment" data-fragment-index="3">Stair-casing artifacts.</li>
+	   <li class="fragment" data-fragment-index="1">Second-order derivative.</li>
+	   <li class="fragment" data-fragment-index="3">Smooth transitions.</li>
+	   <li class="fragment" data-fragment-index="4">Computationally
+	     expensive.</li>
 	 </ul>
        </div>
        <div id="right">
-	 <div style="position:absolute;top:50px;width:488px; height:376px; margin:0 auto;">
+	 <div style="position:absolute;top:50px;width:488px; height:376px;
+	   margin:0 auto;">
 	   <img class="fragment" data-fragment-index="2" width="488px" height="376px" src="images/tgv_mesh.png"
 				      style="position:absolute;top:0px;left:0;" />
 	   <img class="fragment" data-fragment-index="2" width="244px" height="188px" src="images/surface_groundtruth.png"
 				      style="position:absolute;top:188px;left:244px;" />
 	   <div class="fragment" data-fragment-index="2" width="488px"
 	 style="position:absolute;top:368px;left:5px;font-size:large;width:478px"><p>Figure
-	 x: A reconstruction result with TV as regularization term plotted as a
+	 x: A reconstruction result with TGV$^2$ as regularization term plotted as a
 	 surface, where the gray-scale intensity is represented by the height.
 	 In the bottom right corner the underlying ground truth with smooth
 	 intensity transitions.</p></div>
@@ -336,6 +340,45 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      </section>
      <section>
        <h4>Cost Functions</h4>
+       <span><p>Squared $\ell_2$-Norm[<a href="#/references">CP11</a>]:</p></span>
+       <span><p>$$\min_u\left\{\frac{1}{2}\|u \ast k - f\|_2^2\right\}$$</p></span>
+       <ul>
+	 <li>Differentiable, therefore widely used.</li>
+	 <li>Works well with Gaussian noise.</li>
+       </ul>
+     </section>
+     <section>
+       <h4>Cost Functions</h4>
+       <span><p>$\ell_1$-Norm[<a href="#/references">CP11</a>]:</p></span>
+       <span><p>$$\min_u\left\{\|u \ast k - f\|_1\right\}$$</p></span>
+       <ul>
+	 <li>Known to work well for Poisson and Gaussian noise.</li>
+       </ul>
+     </section>
+     <section>
+       <h4>Cost Functions</h4>
+       <span><p>Kullback-Leibler Divergence[<a href="#/references">SCJ12</a>]:</p></span>
+       <span><p style="font-size:75%">$$D_{KL}(f|u\ast k) := \int_\Omega \left(
+	 f\cdot log\left(\frac{f}{u
+	 \ast k}\right) - f + u \ast k \right) + \delta_{[0,1]}(u \ast k) $$</p></span>
+       <ul>
+	 <li>Is only a measure, not a metric.</li>
+	 <li>Describes how much information is lost if $u \ast k$ is used to
+	   approximate $f$.</li>
+       </ul>
+     </section>
+     <section>
+       <ul>
+	 <li>TV - $\ell_1$-Norm</li>
+	 <li>TV$_{Huber}$ - $\ell_1$-Norm</li>
+	 <li>TGV$^2$ - $\ell_1$-Norm</li>
+	 <li>TV - Squared $\ell_2$-Norm</li>
+	 <li>TV$_{Huber}$ - Squared $\ell_2$-Norm</li>
+	 <li>TGV$^2$ - Squared $\ell_2$-Norm</li>
+	 <li>TV - Div$_{KL}$</li>
+	 <li>TV$_{Huber}$ - Div$_{KL}$</li>
+	 <li>TGV$^2$ - Div$_{KL}$</li>
+       </ul>
      </section>
    </section>
    <section>
@@ -361,12 +404,22 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      <section>
        <h4>Datasets</h4>
      </section>
+     <section>
+       <h4>Parameters</h4>
+       <ul>
+	<li>TV Parameters: <span style="font-size:80%">$\lambda \in [0.01, 0.1,
+	    0.2, \dots, 1.0]$</span>.</li>
+	<li>TV-Huber Parameters: <span style="font-size:80%">$\lambda \in [0.01, 0.1, 0.2, \dots, 1.0],
+	    \alpha = 0.05$</span>.</li>
+	<li>TGV Parameters: <span style="font-size:80%">$(\alpha, \beta) \in [(0.01, 0.02), (0.1, 0.2),
+	    \dots, (1.0, 2.0)]$</span>.</li>
+	<li>Experimental setup is available under
+	  github.com/tibuch/FO-PDSolver#experiments.</li>
+      </ul>
+     </section>
    </section>
    <section>
      <h3>Evaluation</h3>
-     <section>
-       <h4>Peak-Signal to Noise Ratio</h4>
-     </section>
      <section>
        <h4>Poisson Noise</h4>
      </section>
@@ -374,14 +427,55 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <h4>Gaussian Noise</h4>
      </section>
      <section>
+       <h4>PSNR Interpretation</h4>
+       <div style="position:absolute;top:100px;left:128px;width:702px; height:500px;
+       margin:0 auto;">
+	 <img class="fragment" data-fragment-index="1" width="702px"
+						height="397px"
+      src="images/PSNR_Reasoning.png"
+      style="position:absolute;top:0px;left:0px" />
+	 <div class="fragment" data-fragment-index="1" width="692px"
+						style="position:absolute;top:409px;left:5px;font-size:large;width:692px"><p>Figure
+						x: Mapping of the PSNRs from the
+						reconstructed images and the
+						input views, downsampled by
+						factor one and distorted by
+						Gaussian noise with parameters
+						(<span
+						  style="font-size:80%">$\mu =
+						  0, \sigma = 0.1$</span>), to a
+						fixed voxel value change.</p></div>
+       </div>
+     </section>
+     <section>
        <h4>Runtime</h4>
      </section>
    </section>
    <section>
      <h3>Summary</h3>
+     <ul>
+       <li>Variational multiview deconvolution models perform as good as
+	 Richardson-Lucy multiview deconvolution in terms of PSNR.</li>
+       <li>For heavily distorted image data the variational multiview
+	 deconvolution models generate better reconstruction results.</li>
+       <li>The gain in image quality is paid by a considerably increased
+	 execution time.</li>
+       <li>TV-Huber as regularization term and $\ell_1$-norm as cost function
+	 should be used in the variational model.</li>
+     </ul>
    </section>
    <section>
      <h3>Future Work</h3>
+     <ul>
+       <li>Merge First-Order Primal-Dual Solver into ImageJ-Ops.</li>
+       <li>Add GPU operations to ImageJ-Ops.</li>
+       <li>Add further regularization terms.</li>
+       <ul>
+	 <li>Hessian-Schatten Norm</li>
+	 <li>Curvelet based</li>
+       </ul>
+       <li>Integrate weights for the different views.</li>
+     </ul>
    </section>
    <section id="references">
      <h3>References</h3>
@@ -392,12 +486,16 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	 convex problems with applications to imaging. <i>Journal of
 	   Mathematical Imaging and Vision</i>, Band 40, Nr. 1, S. 120-145,
 	 2011.</li>
-       <li>Greger, K., J. Swoger, and E. H. K. Stelzer. "Basic building units and
-	 properties of a fluorescence single plane illumination microscope." <i>Review
-	   of Scientific Instruments</i> 78.2 (2007): 023705.</li>
+       <li>Greger, K.; Swoger, J.; Stelzer, E. H. K.; Basic building units and
+	 properties of a fluorescence single plane illumination microscope. <i>Review
+	   of Scientific Instruments</i>, Band 78, Nr. 2, S. 023705, 2007.</li>
        <li>Rudin, L. I.; Osher, S.; Fatemi, E.: Nonlinear total variation based
 	 noise removal algorithms. <i>Physica D: Nonlinear Phenomena</i>, Band
 	 60, Nr. 1-4, S. 259-268, 1992.</li>
+       <li>Sidky, E. Y.; Jørgensen, J. H.; Pan, X.: Convex
+	 optimization problem prototyping for image reconstruction in computed
+	 tomography with the Chambolle–Pock algorithm. <i>Physics in medicine and
+	   biology</i>, Band 57, Nr. 10, S. 3065, 2012.</li>
      </ul>
    </section>
    <p id="footer" style="position:absolute;bottom:-30px;left:50%;width:600px;margin-left:-300px;font-size:medium;visibility:visible;text-align:center;">Master Thesis - An Evaluation of Variational Models for 3D Multiview Deconvolution</p>
