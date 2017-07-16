@@ -1,219 +1,444 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Master Thesis</title>
+    <title>Master Thesis</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
-		<link rel="stylesheet" href="css/twoColumn.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+    <link rel="stylesheet" href="css/twoColumn.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section class="center" data-state="titleSlide">
-					<h2>Master Thesis</h2>
-					<h4>An Evaluation of Variational Models for 3D Multiview Deconvolution</h4>
-					<h5 style="text-align:center;">Tim-Oliver Buchholz</h5>
-					<p style="font-size: 30px;text-align:right;">Department of Computer and Information Science</br>Chair of Computer Vision and Image Analysis</p>
-				</section>
-				<section data-state="normalSlide">
-					<h3>Bioimage Analysis</h3>
-					<div id="left"
-					<ul>
-						<li class="fragment" data-fragment-index="1"><span class="fragment highlight-blue", data-fragment-index="5">Enhancement</span></li>
-						<li class="fragment" data-fragment-index="2">Segmentation</li>
-						<li class="fragment" data-fragment-index="3">Feature Extraction</li>
-						<li class="fragment" data-fragment-index="4">Classification</li>
-					</ul>
-					</div>
-					<div id="right">
-					<div style="position:relative; width:488px; height:588px; margin:0 auto;">
-						<span class="fragment fade-out" data-fragment-index="2">
-							<img class="fragment" data-fragment-index="1" width="488" height="488" src="images/enhancement.png" style="position:absolute;top:0;left:0;" />
-							<div class="fragment" data-fragment-index="1" width="488" style="position:absolute;top:500px;left:5px;font-size:large;"><p>Figure 1: Denoising of Salt-and-Pepper noise with a median filter.</p></div>
-						</span>
-						<span class="fragment fade-out" data-fragment-index="3">
-							<img class="fragment" data-fragment-index="2" width="488" height="488" src="images/segmentation.png" style="position:absolute;top:0;left:0;" />
-							<div class="fragment" data-fragment-index="2" width="488" style="position:absolute;top:500px;left:5px;font-size:large;"><p>Figure 2: Cell segmentation.</p></div>
-							<div class="fragment" data-fragment-index="2" width="488" style="position:absolute;top:525px;left:5px;font-size:small;"><p>Source: KNIME Example Server: 99_Community/01_Image_Processing/03_Applications/07_Intensity_Measurement</p></div>
-						</span>
-						<span class="fragment fade-out" data-fragment-index="4">
-							<img class="fragment" data-fragment-index="3" width="488" height="488" src="images/featureExtraction.png" style="position:absolute;top:0;left:0;" />
-							<div class="fragment" data-fragment-index="3" width="488" style="position:absolute;top:500px;left:5px;font-size:large;"><p>Figure 3: Calculated features on image segments.</p></div>
-							<div class="fragment" data-fragment-index="3" width="488" style="position:absolute;top:525px;left:5px;font-size:small;"><p>Source: KNIME Example Server: 99_Community/01_Image_Processing/03_Applications/06_High_Content_Screening</p></div>
-						</span>
-						<span class="fragment fade-out" data-fragment-index="5">
-							<img class="fragment" data-fragment-index="4" width="488" height="488" src="images/classification.png" style="position:absolute;top:0;left:0;" />
-							<div class="fragment" data-fragment-index="4" width="488" style="position:absolute;top:500px;left:5px;font-size:large;"><p>Figure 4: Segment classification based on extracted features.</p></div>
-							<div class="fragment" data-fragment-index="4" width="488" style="position:absolute;top:525px;left:5px;font-size:small;"><p>Source: KNIME Example Server: 99_Community/01_Image_Processing/03_Applications/06_High_Content_Screening</p></div>
-						</span>
-						<span class="fragment" data-fragment-index="5">
-							<img class="fragment" data-fragment-index="5" width="488" height="488" src="images/imageEnhancement.png" style="position:absolute;top:0;left:0;" />
-							<div class="fragment" data-fragment-index="5" width="488" style="position:absolute;top:500px;left:5px;font-size:large;"><p>Figure 5: Bioimage analysis.</p></div>
-							<div class="fragment" data-fragment-index="5" width="488" style="position:absolute;top:525px;left:5px;font-size:small;"><p>Source: KNIME Example Server: 99_Community/01_Image_Processing/03_Applications/06_High_Content_Screening and /07_Intensity_Measurement</p></div>
-						</span>
-					</div>
-					</div>
-				</section>
-<!--				<section>
-					<h3>High Resolution Microscopy</h3>
-				</section>-->
-				<section>
-					<h3>Light Sheet Fluorescence Microscopy</h3>
-				</section>
-				<section>
-					<h3>Multiview Reconstruction</h3>
-					<section>
-					</section>
-					<section>
-						<h4>Multiview Registration</h4>
-						<ul>
-							<li>Point Spread Function</li>
-						</ul>
-					</section>
-					<section>
-						<h4>Fusion</h3>
-					</section>
-					<section>
-						<h4>Multiview Deconvolution</h4>
-					</section>
-				</section>
-				<section>
-					<h3>Deconvolution</h3>
-					<section>
-					</section>
-					<section>
-						<h4>Convolution Theorem</h4>
-					</section>
-					<section>
-						<h4>Clamped</h4>
-					</section>
-					<section>
-						<h4>Richardson-Lucy</h4>
-					</section>
-					<section>
-						<h4>Variational Models</h4>
-					</section>
-				</section>
-				<section>
-					<h3>Multiview Deconvolution</h3>
-					<ul>
-						<li>Richardson-Lucy Multiview Deconvolution</li>
-						<li>Variational Multiview Deconvolution</li>
-					</ul>
-				</section>
-				<section>
-					<h3>Variational Multiview Deconvolution</h3>
-					<section>
-						<h4>Energy Term</h4>
-					</section>
-					<section>
-						<h4>Regularization Terms</h4>
-					</section>
-					<section>
-						<h4>Cost Functions</h4>
-					</section>
-				</section>
-				<section>
-					<h3>Implementation</h3>
-					<section>
-						<ul>
-							<li>Part of the ImageJ ecosystem</li>
-							<li>Published under the 2-Clause BSD License</li>
-						</ul>
-					</section>
-					<section>
-						<h4>ImageJ-Ops</h4>
-					</section>
-				</section>
-				<section>
-					<h3>Experimental Setup</h3>
-					<section>
-						<h4>Image Formation Process</h4>
-					</section>
-					<section>
-						<h4>Noise Types</h4>
-					</section>
-					<section>
-						<h4>Datasets</h4>
-					</section>
-				</section>
-				<section>
-					<h3>Evaluation</h3>
-					<section>
-						<h4>Peak-Signal to Noise Ratio</h4>
-					</section>
-					<section>
-						<h4>Poisson Noise</h4>
-					</section>
-					<section>
-						<h4>Gaussian Noise</h4>
-					</section>
-					<section>
-						<h4>Runtime</h4>
-					</section>
-				</section>
-				<section>
-					<h3>Summary</h3>
-				</section>
-				<section>
-					<h3>Future Work</h3>
-				</section>
-				<section>
-					<h3>References</h3>
-				</section>
-			<p id="footer" style="position:absolute;bottom:-30px;left:50%;width:600px;margin-left:-300px;font-size:medium;visibility:visible;text-align:center;">Master Thesis - An Evaluation of Variational Models for 3D Multiview Deconvolution</p>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	<section class="center" data-state="titleSlide">
+	  <h2>Master Thesis</h2>
+	  <h4>An Evaluation of Variational Models for 3D Multiview Deconvolution</h4>
+	  <h5 style="text-align:center;">Tim-Oliver Buchholz</h5>
+	  <p style="font-size: 30px;text-align:right;">Department of Computer and Information Science</br>Chair of Computer Vision and Image Analysis</p>
+	</section>
+	<section data-state="normalSlide">
+	  <h3>Bioimage Analysis</h3>
+	  <div id="left">
+	    <ul>
+	      <li class="fragment" data-fragment-index="1"><span class="fragment highlight-blue", data-fragment-index="5">Enhancement</span></li>
+	      <li class="fragment" data-fragment-index="2">Segmentation</li>
+	      <li class="fragment" data-fragment-index="3">Feature Extraction</li>
+	      <li class="fragment" data-fragment-index="4">Classification</li>
+	    </ul>
+	  </div>
+	  <div id="right">
+	    <div style="position:relative; width:488px; height:588px; margin:0 auto;">
+	      <span class="fragment fade-out" data-fragment-index="2">
+		<img class="fragment" data-fragment-index="1" width="488px" height="488px" src="images/enhancement.png" style="position:absolute;top:0;left:0;" />
+		<div class="fragment" data-fragment-index="1" width="488px" style="position:absolute;top:500px;left:5px;font-size:large;width:468px"><p>Figure 1: Denoising of Salt-and-Pepper noise with a median filter.</p></div>
+	      </span>
+	      <span class="fragment fade-out" data-fragment-index="3">
+		<img class="fragment" data-fragment-index="2" width="488px" height="488px" src="images/segmentation.png" style="position:absolute;top:0;left:0;" />
+		<div class="fragment" data-fragment-index="2" width="488px" style="position:absolute;top:500px;left:5px;font-size:large;width:468px"><p>Figure 2: Cell segmentation.</p></div>
+		<div class="fragment" data-fragment-index="2" width="488px" style="position:absolute;top:525px;left:5px;font-size:small;width:468px"><p>Source: KNIME Example Server: 99_Community/01_Image_Processing/03_Applications/07_Intensity_Measurement</p></div>
+	      </span>
+	      <span class="fragment fade-out" data-fragment-index="4">
+		<img class="fragment" data-fragment-index="3" width="488px" height="488px" src="images/featureExtraction.png" style="position:absolute;top:0;left:0;" />
+		<div class="fragment" data-fragment-index="3" width="488px" style="position:absolute;top:500px;left:5px;font-size:large;width:468px"><p>Figure 3: Calculated features on image segments.</p></div>
+		<div class="fragment" data-fragment-index="3" width="488px" style="position:absolute;top:525px;left:5px;font-size:small;width:468px"><p>Source: KNIME Example Server: 99_Community/01_Image_Processing/03_Applications/06_High_Content_Screening</p></div>
+	      </span>
+	      <span class="fragment fade-out" data-fragment-index="5">
+		<img class="fragment" data-fragment-index="4" width="488px" height="488px" src="images/classification.png" style="position:absolute;top:0;left:0;" />
+		<div class="fragment" data-fragment-index="4" width="488px" style="position:absolute;top:500px;left:5px;font-size:large;width:468px"><p>Figure 4: Segment classification based on extracted features.</p></div>
+		<div class="fragment" data-fragment-index="4" width="488px" style="position:absolute;top:525px;left:5px;font-size:small;width:468px"><p>Source: KNIME Example Server: 99_Community/01_Image_Processing/03_Applications/06_High_Content_Screening</p></div>
+	      </span>
+	      <span class="fragment" data-fragment-index="5">
+		<img class="fragment" data-fragment-index="5" width="488px" height="488px" src="images/imageEnhancement.png" style="position:absolute;top:0;left:0;" />
+		<div class="fragment" data-fragment-index="5" width="488px" style="position:absolute;top:500px;left:5px;font-size:large;width:468px"><p>Figure 5: Bioimage analysis.</p></div>
+		<div class="fragment" data-fragment-index="5" width="488px" style="position:absolute;top:525px;left:5px;font-size:small;width:468px"><p>Source: KNIME Example Server: 99_Community/01_Image_Processing/03_Applications/06_High_Content_Screening and /07_Intensity_Measurement</p></div>
+	      </span>
+	    </div>
+	  </div>
+	</section>
+	<!--<section>
+   <h3>High Resolution Microscopy</h3>
+   </section>-->
+   <section id="lsfm">
+     <h3>Light Sheet Fluorescence Microscopy</h3>
+     <div id="left">
+       <ul>
+	 <li>Light sheet thickness between $1\mu m - 10\mu m$.</li>
+	 <li>Live imaging.</li>
+	 <li>Non-isotropic res-olution.</li>
+	 <li>Multiview acquisition.</li>
+       </ul>
+     </div>
+     <div id="right">
+       <div style="position:relative; width:488px; height:588px; margin:0 auto;">
+	 <img width="488px" height="348px" src="images/lsfm.png"
+				    style="position:absolute;top:60px;left:0;" />
+	 <div width="488px"
+       style="position:absolute;top:440px;left:5px;font-size:large;width:468px"><p>Figure
+       6: (A) Setup of a Light Sheet Fluorescence Microscope. (B) Optical
+       sectioning of the specimen [<a
+       href="#/references">GSS07</a>].</p></div>
+       </div>
+     </div>
+   </section>
+   <section>
+     <h3>Multiview Reconstruction</h3>
+     <section>
+       <div style="position:relative; width:772px; height:500px; margin:0 auto;">
+	 <img width="512px" height="200px" src="images/resolutionDiff.png"
+				    style="position:absolute;top:0px;left:110px;" />
+	 <div width="732px"
+       style="position:absolute;top:212px;left:5px;font-size:large;width:732px"><p>Figure
+       7: Non-isotropic resolution of the individual views. (A) the lateral
+       resolution of the first view  and (B) the axial resolution of the
+       second view.</p></div>
+	 <div width="732px"
+       style="position:absolute;top:265px;left:5px;font-size:small;width:732px"><p>Source:
+       Bachelor Arbeit -  Optimierte Registrierung für diSPIM im Hochdurchsatz
+       (Tim-Oliver Buchholz, 2016)</p></div>
+	 <img class="fragment" data-fragment-index="1" width="772px" height="180px" src="images/multiviewReconstruction.png"
+									     style="position:absolute;top:300px;left:0;" />
+	 <div class="fragment" data-fragment-index="1" width="772px"
+						style="position:absolute;top:492px;left:5px;font-size:large;width:732px"><p>Figure
+						8: Multiview reconstruction of two acquired views. First the views are
+						registered and then fused.</p></div>
+       </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-		<script src="parser.js"></script>
+     </section>
+     <section>
+       <h4>Multiview Registration: Bead Based</h4>
+       <div>
+	 <ol style="position:absolute;left:20px">
+	   <li class="fragment" data-fragment-index="1">Point cloud extraction.</li>
+	   <li class="fragment" data-fragment-index="2">Identification of corresponding points.</li>
+	   <li class="fragment" data-fragment-index="3">Computation of transformation.</li>
+	 </ol>
+       </div>
+       <div class="fragment" data-fragment-index="1" style="position:absolute; width:772px; height:500px; margin:0 auto;">
+	 <img width="332px" height="168px" src="images/pointExtraction.png"
+				    style="position:absolute;top:160px;left:0px;" />
+	 <div class="fragment" data-fragment-index="1" width="732px"
+						style="position:absolute;top:340px;left:5px;font-size:large;width:332px"><p>Figure
+						9: Sub-resolution point extraction from Point Spread Function (PSF).</p></div>
+       </div>
+       <div class="fragment" data-fragment-index="2" style="position:absolute; width:772px; height:500px; margin:0 auto;">
+	 <img width="332px" height="168px" src="images/correspondingPoints.png"
+				    style="position:absolute;top:160px;left:332px;" />
+	 <div class="fragment" data-fragment-index="2" width="732px"
+						style="position:absolute;top:340px;left:342px;font-size:large;width:332px"><p>Figure
+						10: Extraction of corresponding
+						points.</p></div>
+       </div>
+       <div class="fragment" data-fragment-index="3" style="position:absolute; width:772px; height:500px; margin:0 auto;">
+	 <img width="168px" height="168px" src="images/registration.png"
+				    style="position:absolute;top:160px;left:734px;" />
+	 <div class="fragment" data-fragment-index="3" width="732px"
+						style="position:absolute;top:340px;left:674px;font-size:large;width:332px"><p>Figure
+						11: Transformation to a global
+						coordinate system.</p></div>
+       </div>
+     </section>
+     <section>
+       <h4>Multiview Combination</h3>
+       <div>
+	 <ul style="position:absolute;left:20px">
+	   <li class="fragment" data-fragment-index="1">Fusion</li>
+	   <li class="fragment" data-fragment-index="2">Multiview
+	     Deconvolution with known PSF.</li>
+	 </ul>
+       </div>
+       <div style="position:absolute;top:200px;height:400px;width:600px">
+	 <div style="position:absolute; width:772px; height:500px; margin:0 auto;">
+	   <img width="150px" height="150px" src="images/view0.png"
+				      style="position:absolute;top:0px;left:0px;" />
+	   <img width="150px" height="150px" src="images/view1.png"
+				      style="position:absolute;top:0px;left:150px;" />
+	   <div width="300px"
+	 style="position:absolute;top:162px;left:30px;font-size:large;width:290px"><p>Figure
+	 12: The registered views.</p></div>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				// Display controls in the bottom right corner
-				controls: true,
-				// Transition style
-				transition: 'none', // none/fade/slide/convex/concave/zoom
-				// Vertical centering of slides
-				center: false,
-				math: {
-						mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
-						config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
-					},
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/math/math.js', async: true }
-				]
-			});
-			Reveal.addEventListener( 'titleSlide', function() {
-				document.getElementById("footer").style.visibility = "hidden";
-			}, false );
-			Reveal.addEventListener( 'normalSlide', function() {
-				document.getElementById("footer").style.visibility = "visible";
-			}, false );
-		</script>
-	</body>
+	   <img class="fragment" data-fragment-index="1" width="150px" height="150px" src="images/fusion.png"
+									       style="position:absolute;top:0px;left:435px;" />
+	   <div class="fragment" data-fragment-index="1" width="300px"
+						  style="position:absolute;top:162px;left:395px;font-size:large;width:290px"><p>Figure
+						  13: Fusion of the views.</p></div>
+	   <img class="fragment" data-fragment-index="2" width="150px"
+						  height="150px"
+	src="images/multiviewDeconvolution.png"
+ style="position:absolute;top:0px;left:720px;" />
+	   <div class="fragment" data-fragment-index="2" width="300px"
+						  style="position:absolute;top:162px;left:662px;font-size:large;width:290px"><p>Figure
+						  14: Multiview deconvolution.</p></div>
+
+	 </div>
+       </div>
+     </section>
+   </section>
+   <section>
+     <h3>Deconvolution</h3>
+     <section>
+       <span><p>Deconvolution is the inverse operation of convolution.</p></span>
+       <div style="position:absolute;top:100px;left:128px;height:300px;width:704px">
+	 <div style="position:absolute; width:704px; height:300px; margin:0 auto;">
+	   <img width="244px" height="244px" src="images/eye.png"
+				      style="position:absolute;top:0px;left:0px;" />
+	   <span style="position:absolute;top:90px;left:277px;"><p>$\ast$</p></span>
+	   <img width="28px" height="28px" src="images/kernel.png"
+				      style="position:absolute;top:108px;left:336px;" /> 
+	   <span style="position:absolute;top:90px;left:396px;"><p>$=$</p></span>
+	   <img width="244px" height="244px" src="images/eyeConv.png"
+				      style="position:absolute;top:0px;left:460px;" />
+	   <div width="554px"
+	 style="position:absolute;top:256px;left:5px;font-size:large;width:694px"><p>Figure
+	 15: Convolution of an image with a kernel, where $\ast$ denotes the
+	 convolution operation.</p></div>
+	 </div>
+       </div>
+       <ul style="position:absolute;top:430px;">
+	 <li class="fragment">Camera shaking.</li>
+	 <li class="fragment">Diffraction artifacts introduced by the optical
+	   system (PSF).</li>
+       </ul>
+     </section>
+     <section>
+       <h4>Convolution Theorem</h4>
+     </section>
+     <section>
+       <h4>Clamped</h4>
+     </section>
+     <section>
+       <h4>Richardson-Lucy</h4>
+     </section>
+     <section>
+       <h4>Variational Models</h4>
+     </section>
+   </section>
+   <section>
+     <h3>First-Order Primal-Dual Algorithm</h3>
+     <ul>
+       <li>A solver for convex energy minimization problems [<a
+      href="#/references">CP11</a>].</li>
+     </ul>
+     <pre><code data-trim>
+      code;
+     </code></pre>
+   </section>
+   <section>
+     <h3>Variational Multiview Deconvolution</h3>
+     <section>
+       <h4>Energy Term</h4>
+       <span><p style="font-size:100%;">$$E(u) = \lambda R(u) + \sum_{j=1}^m T(u \ast k_j, f^j_\delta)$$</p></span>
+       <ul>
+	<li>$f^j_\delta$ the $j$-th observation of the underlying image
+	$f$.</li>
+	<li>$k_j$ the PSF of the optical system which acquired $f^j_\delta$.</li>
+	<li>$R(\cdot)$ the regularization term with parameter $\lambda$.</li>
+	<li>$T(\cdot, \cdot)$ the cost function.</li>
+	<li>$u$ the reconstructed image.</li>
+       </ul>
+     </section>
+     <section>
+       <h4>Regularization Terms</h4>
+       <div id="left">
+	 <p>Total Variation [<a href="#/references">ROF92</a>]:</p>
+	 <span><p style="font-size:100%;">$$TV(u) := \|\nabla
+	   u\|_{2,1}$$</p></span>
+	 <ul>
+	   <li class="fragment" data-fragment-index="1"> Piece-wise consistency.</li>
+	   <li class="fragment" data-fragment-index="3">Stair-casing artifacts.</li>
+	 </ul>
+       </div>
+       <div id="right">
+	 <div style="position:absolute;top:50px;width:488px; height:376px; margin:0 auto;">
+	   <img class="fragment" data-fragment-index="2" width="488px" height="376px" src="images/tv_mesh.png"
+				      style="position:absolute;top:0px;left:0;" />
+	   <img class="fragment" data-fragment-index="2" width="244px" height="188px" src="images/surface_groundtruth.png"
+				      style="position:absolute;top:188px;left:244px;" />
+	   <div class="fragment" data-fragment-index="2" width="488px"
+	 style="position:absolute;top:368px;left:5px;font-size:large;width:478px"><p>Figure
+	 x: A reconstruction result with TV as regularization term plotted as a
+	 surface, where the gray-scale intensity is represented by the height.
+	 In the bottom right corner the underlying ground truth with smooth
+	 intensity transitions.</p></div>
+	 </div>
+       </div>
+     </section>
+     <section>
+       <h4>Regularization Terms</h4>
+       <div id="left">
+	 <p>TV-Huber [<a href="#/references">CP11</a>]:</p>
+	 <ul>
+	   <li>Huber-Norm [<a href="#/references">Hub73</a>]:</li>
+	 </ul>
+	 <span><p style="font-size:50%;">$$\| x\|_{\alpha} := \begin{cases}
+	    \frac{\| x\|_2^2}{2\alpha} &, \| x\|_2 \leq \alpha\\
+	      \| x\|_2 - \frac{\alpha}{2} &, \| x\|_2 > \alpha
+		\end{cases}$$</p></span>
+	 <ul>
+	   <li class="fragment" data-fragment-index="1">$\ell_1$-norm is replaced
+	   by the Huber-Norm.</li>
+	 </ul>
+       </div>
+       <div id="right">
+	 <div style="position:absolute;top:50px;width:488px; height:376px; margin:0 auto;">
+	   <img class="fragment" data-fragment-index="2" width="488px"
+						  height="376px"
+	src="images/huber_mesh.png" style="position:absolute;top:0px;left:0;" />
+	   <img class="fragment" data-fragment-index="2" width="244px" height="188px" src="images/surface_groundtruth.png"
+				      style="position:absolute;top:188px;left:244px;" />
+	   <div class="fragment" data-fragment-index="2" width="488px"
+	 style="position:absolute;top:368px;left:5px;font-size:large;width:478px"><p>Figure
+	 x: A reconstruction result with TV as regularization term plotted as a
+	 surface, where the gray-scale intensity is represented by the height.
+	 In the bottom right corner the underlying ground truth with smooth
+	 intensity transitions.</p></div>
+	 </div>
+       </div>
+     </section>
+     <section>
+       <h4>Regularization Terms</h4>
+       <div id="left"> 
+	 <p>Total Generalized Variation [<a href="#/references">BKL</a>]:</p>
+	 <ul>
+	   <li>$TV(u) := \|\nabla u\|_{2,1}$ </li>
+	   <li class="fragment" data-fragment-index="1"> Piece-wise consistency.</li>
+	   <li class="fragment" data-fragment-index="3">Stair-casing artifacts.</li>
+	 </ul>
+       </div>
+       <div id="right">
+	 <div style="position:absolute;top:50px;width:488px; height:376px; margin:0 auto;">
+	   <img class="fragment" data-fragment-index="2" width="488px" height="376px" src="images/tgv_mesh.png"
+				      style="position:absolute;top:0px;left:0;" />
+	   <img class="fragment" data-fragment-index="2" width="244px" height="188px" src="images/surface_groundtruth.png"
+				      style="position:absolute;top:188px;left:244px;" />
+	   <div class="fragment" data-fragment-index="2" width="488px"
+	 style="position:absolute;top:368px;left:5px;font-size:large;width:478px"><p>Figure
+	 x: A reconstruction result with TV as regularization term plotted as a
+	 surface, where the gray-scale intensity is represented by the height.
+	 In the bottom right corner the underlying ground truth with smooth
+	 intensity transitions.</p></div>
+	 </div>
+       </div>
+     </section>
+     <section>
+       <h4>Cost Functions</h4>
+     </section>
+   </section>
+   <section>
+     <h3>Implementation</h3>
+     <section>
+       <ul>
+	 <li>Part of the ImageJ ecosystem</li>
+	 <li>Published under the 2-Clause BSD License</li>
+       </ul>
+     </section>
+     <section>
+       <h4>ImageJ-Ops</h4>
+     </section>
+   </section>
+   <section>
+     <h3>Experimental Setup</h3>
+     <section>
+       <h4>Image Formation Process</h4>
+     </section>
+     <section>
+       <h4>Noise Types</h4>
+     </section>
+     <section>
+       <h4>Datasets</h4>
+     </section>
+   </section>
+   <section>
+     <h3>Evaluation</h3>
+     <section>
+       <h4>Peak-Signal to Noise Ratio</h4>
+     </section>
+     <section>
+       <h4>Poisson Noise</h4>
+     </section>
+     <section>
+       <h4>Gaussian Noise</h4>
+     </section>
+     <section>
+       <h4>Runtime</h4>
+     </section>
+   </section>
+   <section>
+     <h3>Summary</h3>
+   </section>
+   <section>
+     <h3>Future Work</h3>
+   </section>
+   <section id="references">
+     <h3>References</h3>
+     <ul class="reference">
+       <li>Bredis, K.; Knoll, F.; Langkammer, C.: Tgv regularization for
+	 variational approaches to quantitative susceptibility mapping.</li>
+       <li>Chambolle, A.; Pock, T.: A first-order primal-dual algorithm for
+	 convex problems with applications to imaging. <i>Journal of
+	   Mathematical Imaging and Vision</i>, Band 40, Nr. 1, S. 120-145,
+	 2011.</li>
+       <li>Greger, K., J. Swoger, and E. H. K. Stelzer. "Basic building units and
+	 properties of a fluorescence single plane illumination microscope." <i>Review
+	   of Scientific Instruments</i> 78.2 (2007): 023705.</li>
+       <li>Rudin, L. I.; Osher, S.; Fatemi, E.: Nonlinear total variation based
+	 noise removal algorithms. <i>Physica D: Nonlinear Phenomena</i>, Band
+	 60, Nr. 1-4, S. 259-268, 1992.</li>
+     </ul>
+   </section>
+   <p id="footer" style="position:absolute;bottom:-30px;left:50%;width:600px;margin-left:-300px;font-size:medium;visibility:visible;text-align:center;">Master Thesis - An Evaluation of Variational Models for 3D Multiview Deconvolution</p>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="parser.js"></script>
+
+    <script>
+// More info about config & dependencies:
+// - https://github.com/hakimel/reveal.js#configuration
+// - https://github.com/hakimel/reveal.js#dependencies
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Transition style
+  transition: 'none', // none/fade/slide/convex/concave/zoom
+  // Vertical centering of slides
+  center: false,
+  width: 960,
+  height: 700,
+  math: {
+    mathjax: '/home/tibuch/MathJax-2.7.1/MathJax.js',
+    config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+  },
+  dependencies: [
+  { src: 'plugin/markdown/marked.js' },
+  { src: 'plugin/markdown/markdown.js' },
+  { src: 'plugin/notes/notes.js', async: true },
+  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'plugin/math/math.js', async: true }
+  ]
+});
+Reveal.addEventListener( 'titleSlide', function() {
+  document.getElementById("footer").style.visibility = "hidden";
+}, false );
+Reveal.addEventListener( 'normalSlide', function() {
+  document.getElementById("footer").style.visibility = "visible";
+}, false );
+    </script>
+  </body>
 </html>
