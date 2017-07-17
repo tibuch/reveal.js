@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -28,12 +28,14 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	<section class="center" data-state="titleSlide">
 	  <h2>Master Thesis</h2>
 	  <h4>An Evaluation of Variational Models for 3D Multiview Deconvolution</h4>
-	  <h5 style="text-align:center;">Tim-Oliver Buchholz</h5>
-	  <p style="font-size: 30px;text-align:right;">Department of Computer and Information Science</br>Chair of Computer Vision and Image Analysis</p>
+	  <div style="position:absolute;top:300px;left:320px;width:600px;">
+	  <h5 style="font-size:80%;text-align:left;">Tim-Oliver Buchholz</h5>
+	  </div>
+	  <p style="position:absolute;top:330px;left:320px;font-size: 30px;text-align:right;">Department of Computer and Information Science</br>Chair of Computer Vision and Image Analysis</p>
 	</section>
 	<section data-state="normalSlide">
 	  <h3>Bioimage Analysis</h3>
-	  <div id="left">
+	  <div style="font-size:75%" id="left">
 	    <ul>
 	      <li class="fragment" data-fragment-index="1"><span class="fragment highlight-blue", data-fragment-index="5">Enhancement</span></li>
 	      <li class="fragment" data-fragment-index="2">Segmentation</li>
@@ -58,7 +60,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		<div class="fragment" data-fragment-index="3" width="488px" style="position:absolute;top:525px;left:5px;font-size:small;width:468px"><p>Source: KNIME Example Server: 99_Community/01_Image_Processing/03_Applications/06_High_Content_Screening</p></div>
 	      </span>
 	      <span class="fragment fade-out" data-fragment-index="5">
-		<img class="fragment" data-fragment-index="4" width="488px" height="488px" src="images/classification.png" style="position:absolute;top:0;left:0;" />
+		<img class="fragment" data-fragment-index="4" width="488px"
+		height="488px" src="images/classification.png" style="border:1px
+		solid;position:absolute;top:0;left:0;" />
 		<div class="fragment" data-fragment-index="4" width="488px" style="position:absolute;top:500px;left:5px;font-size:large;width:468px"><p>Figure 4: Segment classification based on extracted features.</p></div>
 		<div class="fragment" data-fragment-index="4" width="488px" style="position:absolute;top:525px;left:5px;font-size:small;width:468px"><p>Source: KNIME Example Server: 99_Community/01_Image_Processing/03_Applications/06_High_Content_Screening</p></div>
 	      </span>
@@ -75,7 +79,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
    </section>-->
    <section id="lsfm">
      <h3>Light Sheet Fluorescence Microscopy</h3>
-     <div id="left">
+     <div style="font-size:75%" id="left">
        <ul>
 	 <li>Light sheet thickness between $1\mu m - 10\mu m$.</li>
 	 <li>Live imaging.</li>
@@ -86,9 +90,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      <div id="right">
        <div style="position:relative; width:488px; height:588px; margin:0 auto;">
 	 <img width="488px" height="348px" src="images/lsfm.png"
-				    style="position:absolute;top:60px;left:0;" />
+				    style="position:absolute;top:0px;left:0;" />
 	 <div width="488px"
-       style="position:absolute;top:440px;left:5px;font-size:large;width:468px"><p>Figure
+       style="position:absolute;top:380px;left:5px;font-size:large;width:468px"><p>Figure
        6: (A) Setup of a Light Sheet Fluorescence Microscope. (B) Optical
        sectioning of the specimen [<a
        href="#/references">GSS07</a>].</p></div>
@@ -121,40 +125,45 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      </section>
      <section>
        <h4>Multiview Registration: Bead Based</h4>
-       <div>
+       <div style="font-size:75%">
 	 <ol style="position:absolute;left:20px">
 	   <li class="fragment" data-fragment-index="1">Point cloud extraction.</li>
 	   <li class="fragment" data-fragment-index="2">Identification of corresponding points.</li>
 	   <li class="fragment" data-fragment-index="3">Computation of transformation.</li>
 	 </ol>
        </div>
-       <div class="fragment" data-fragment-index="1" style="position:absolute; width:772px; height:500px; margin:0 auto;">
-	 <img width="332px" height="168px" src="images/pointExtraction.png"
-				    style="position:absolute;top:160px;left:0px;" />
-	 <div class="fragment" data-fragment-index="1" width="732px"
-						style="position:absolute;top:340px;left:5px;font-size:large;width:332px"><p>Figure
-						9: Sub-resolution point extraction from Point Spread Function (PSF).</p></div>
-       </div>
-       <div class="fragment" data-fragment-index="2" style="position:absolute; width:772px; height:500px; margin:0 auto;">
-	 <img width="332px" height="168px" src="images/correspondingPoints.png"
-				    style="position:absolute;top:160px;left:332px;" />
-	 <div class="fragment" data-fragment-index="2" width="732px"
-						style="position:absolute;top:340px;left:342px;font-size:large;width:332px"><p>Figure
-						10: Extraction of corresponding
-						points.</p></div>
-       </div>
-       <div class="fragment" data-fragment-index="3" style="position:absolute; width:772px; height:500px; margin:0 auto;">
-	 <img width="168px" height="168px" src="images/registration.png"
-				    style="position:absolute;top:160px;left:734px;" />
-	 <div class="fragment" data-fragment-index="3" width="732px"
-						style="position:absolute;top:340px;left:674px;font-size:large;width:332px"><p>Figure
-						11: Transformation to a global
-						coordinate system.</p></div>
+       <div style="position:absolute; width:772px; height:500px; top:240px;">
+	 <div class="fragment" data-fragment-index="1" style="position:absolute;
+	 width:332px; height:500px;top:0px;left:0px;">
+	   <img width="332px" height="168px" src="images/pointExtraction.png"
+				      style="position:absolute;top:0px;left:0px;" />
+	   <div class="fragment" data-fragment-index="1" width="332px"
+						  style="position:absolute;top:170px;left:5px;font-size:large;width:322px"><p>Figure
+						  9: Sub-resolution point extraction from Point Spread Function (PSF).</p></div>
+	 </div>
+	 <div class="fragment" data-fragment-index="2" style="position:absolute;
+	 width:332px; height:500px; top:0px;left:348px;">
+	   <img width="332px" height="168px" src="images/correspondingPoints.png"
+				      style="position:absolute;top:0px;left:0px;" />
+	   <div class="fragment" data-fragment-index="2" width="332px"
+						  style="position:absolute;top:170px;left:5px;font-size:large;width:322px"><p>Figure
+						  10: Extraction of corresponding
+						  points.</p></div>
+	 </div>
+	 <div class="fragment" data-fragment-index="3" style="position:absolute;
+	 width:332px; height:500px;top:0px;left:770px;">
+	   <img width="168px" height="168px" src="images/registration.png"
+				      style="position:absolute;top:0px;left:0px;" />
+	   <div class="fragment" data-fragment-index="3" width="332px"
+						  style="position:absolute;top:170px;left:-79px;font-size:large;width:322px"><p>Figure
+						  11: Transformation to a global
+						  coordinate system.</p></div>
+	 </div>
        </div>
      </section>
      <section>
        <h4>Multiview Combination</h3>
-       <div>
+       <div style="font-size:75%">
 	 <ul style="position:absolute;left:20px">
 	   <li class="fragment" data-fragment-index="1">Fusion</li>
 	   <li class="fragment" data-fragment-index="2">Multiview
@@ -191,7 +200,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
    <section>
      <h3>Deconvolution</h3>
      <section>
-       <span><p>Deconvolution is the inverse operation of convolution.</p></span>
+       <span><p style="font-size:75%">Deconvolution is the inverse operation of convolution.</p></span>
        <div style="position:absolute;top:100px;left:128px;height:300px;width:704px">
 	 <div style="position:absolute; width:704px; height:300px; margin:0 auto;">
 	   <img width="244px" height="244px" src="images/eye.png"
@@ -208,18 +217,18 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	 convolution operation.</p></div>
 	 </div>
        </div>
-       <ul style="position:absolute;top:430px;">
+       <ul style="position:absolute;top:430px;font-size:75%;">
 	 <li class="fragment">Camera shaking.</li>
 	 <li class="fragment">Diffraction artifacts introduced by the optical
 	   system (PSF).</li>
        </ul>
      </section>
-     <section>
+     <!--<section>
        <h4>Convolution Theorem</h4>
      </section>
      <section>
        <h4>Clamped</h4>
-     </section>
+     </section>-->
      <section>
        <h4>Richardson-Lucy</h4>
      </section>
@@ -228,21 +237,101 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      </section>
    </section>
    <section>
-     <h3>First-Order Primal-Dual Algorithm</h3>
-     <ul>
-       <li>A solver for convex energy minimization problems [<a
-      href="#/references">CP11</a>].</li>
-     </ul>
-     <pre><code data-trim>
-      code;
-     </code></pre>
+     <h3>Convex Problems</h3>
+     <section>
+       <h4>Energy Minimization Problem</h4>
+       <table style="font-size:75%">
+	<tr class="fragment" data-fragment-index="1">
+	  <td>Primal-Problem</td>
+	  <td><span style="font-size:80%;text-align:left;">$$\min_u \left\{ \|u\|_2\right\}$$</span></td>
+	</tr>
+	<tr class="fragment" data-fragment-index="2">
+	  <td>Primal-Dual-Problem</td>
+	  <td><span style="font-size:80%;text-align:left;">$$\min_u \max_{\|p\|_2 \leq 1} \left\{
+	      \langle u, p \rangle \right\}$$</span></td>
+	</tr>
+       </table>
+       <div style="position:relative;align:center;
+	 width:350px; height:363px; margin:0 auto;">
+	 <div class="fragment fade-out" data-fragment-index="2">
+	 <img class="fragment" data-fragment-index ="1"  width="350px"
+						  height="263px" src="images/convexProblem.png"
+				    style="position:absolute;top:0px;left:0px;" />
+	 	  <div class="fragment" data-fragment-index="1" width="350px"
+						style="position:absolute;top:275px;left:5px;font-size:large;width:340px"><p>Figure
+						x: A convex minimization
+						problem.</p></div>
+	  </div>
+	 <img class="fragment" data-fragment-index ="2"  width="350px"
+						  height="263px"
+	src="images/saddleProblem.png" style="position:absolute;top:0px;left:0px;" />
+	 <div class="fragment" data-fragment-index="2" width="350px"
+						style="position:absolute;top:275px;left:45px;font-size:large;width:340px"><p>Figure
+						x: A saddle point problem.</p></div>
+       </div>
+     </section>
+     <section>
+      <h4>First-Order Primal-Dual Algorithm</h4>
+      <table style="position:absolute;left:0px;font-size:75%">
+	<tr>
+	  <td>Primal-Problem</td>
+	  <td>$$\min_u \{F(K(u)) + G(u)\}$$</td>
+	</tr>
+	<tr>
+	  <td>Primal-Dual-Problem</td>
+	  <td>$$\min_u \max_p \{\langle K(u), p\rangle + G(u) -
+	    F^\ast(p)\}$$</td>
+	</tr>
+      </table>
+      <div style="position:absolute;left:15px;top:250px;width:900px;">
+	<p style="font-size:75%">Solver [<a href="#/references">CP11</a>]:</p>
+      <div style="position:absolute;left:20px;top:40px;width:900px;">
+      <p style="font-size:75%">$p_{n+1} = \text{prox}_{\sigma F^\ast}(p_n +
+      \sigma K \bar{u}_n)$</p>
+      <p style="font-size:75%">$u_{n+1} = \text{prox}_{\tau G}(u_n + \tau K^\ast
+      p_{n+1})$</p>
+      <p style="font-size:75%">$\bar{u}_{n+1} = u_{n+1} + \theta(u_{n+1} - u_n)$</p>
+      <p style="font-size:75%">Initialize <span style="font-size:80%">$p_0,
+	u_0$,</span> arbitrarily, set <span style="font-size:80%">$\bar{u}_0 =
+	u_0$</span> and choose step sizes <span style="font-size:80%">$\sigma,
+	\tau > 0$</span> and  <span style="font-size:80%">$\theta \in [0,
+	1]$.</span>
+      </div>
+      </div>
+     </section>
+     <section>
+       <h4>Convex Conjugate</h4>
+       <p style="font-size:75%">For <span style="font-size:80%">$f \in conv(\mathcal{V})$</span> the
+       convex conjugate <span style="font-size:80%">$f^\ast : \mathcal{V}^\ast
+	 \rightarrow \mathbb{R} \cup \{\infty\}$</span> is defined as:</p>
+       <p style="font-size:75%">$$f^\ast (\phi) := \sup_{v \in \mathcal{V}} \{\langle v, \phi \rangle
+       - f(v)\}$$</p>
+     </section>
+     <section>
+       <h4>Proximity Operator</h4>
+       <p style="font-size:75%">The proximity operator <span
+	  style="font-size:80%">$\text{prox}_{\tau H}(x)$</span> for a convex
+	functional <span style="font-size:80%">$H$</span> and step size <span
+		  style="font-size:80%">$\tau$</span> is defined as:</p>
+       <p style="font-size:75%">$$\text{prox}_{\tau H}(x) := \min_y \left\{
+       \frac{(y - x)^2}{2\tau} + H(y)\right\}$$</p>
+     </section>
+     <section>
+       <h4>Adjoint Operator</h4>
+       <p style="font-size:75%">The adjoint operator <span
+	  style="font-size:80%">$K^\ast : \mathcal{W} \rightarrow
+	  \mathcal{V}$</span> of the linear operator <span
+   style="font-size:80%">$K: \mathcal{V} \rightarrow \mathcal{W}$</span> is defined as:</p>
+       <p style="font-size:75%">$$(Kx, y)_\mathcal{W} = (x, K^\ast
+       y)_\mathcal{V} \: \forall x \in \mathcal{V}, y \in \mathcal{W}$$</p>
+     </section>
    </section>
    <section>
      <h3>Variational Multiview Deconvolution</h3>
      <section>
        <h4>Energy Term</h4>
        <span><p style="font-size:100%;">$$E(u) = \lambda R(u) + \sum_{j=1}^m T(u \ast k_j, f^j_\delta)$$</p></span>
-       <ul>
+       <ul style="font-size:75%">
 	<li>$f^j_\delta$ the $j$-th observation of the underlying image
 	$f$.</li>
 	<li>$k_j$ the PSF of the optical system which acquired $f^j_\delta$.</li>
@@ -253,7 +342,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      </section>
      <section>
        <h4>Regularization Terms</h4>
-       <div id="left">
+       <div id="left" style="font-size:75%">
 	 <p>Total Variation [<a href="#/references">ROF92</a>]:</p>
 	 <span><p style="font-size:100%;">$$TV(u) := \min_u \{\|\nabla
 	   u\|_{2,1}\}$$</p></span>
@@ -279,7 +368,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      </section>
      <section>
        <h4>Regularization Terms</h4>
-       <div id="left">
+       <div id="left" style="font-size:75%">
 	 <p>TV-Huber [<a href="#/references">CP11</a>]:</p>
 	 <ul>
 	   <li>Huber-Norm [<a href="#/references">Hub73</a>]:</li>
@@ -311,7 +400,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      </section>
      <section>
        <h4>Regularization Terms</h4>
-       <div id="left"> 
+       <div id="left" style="font-size:75%"> 
 	 <p>Total Generalized Variation [<a href="#/references">BKL</a>]:</p>
 	 <span><p style="font-size:45%">$$TGV^2(u) := \min_{u, w} \{ \alpha \|\nabla u - w\|_{2,1} +
 	   \beta \|Dw\|_{2,1}\}$$</p></span>
@@ -340,23 +429,28 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      </section>
      <section>
        <h4>Cost Functions</h4>
+       <div style="font-size:75%">
        <span><p>Squared $\ell_2$-Norm[<a href="#/references">CP11</a>]:</p></span>
        <span><p>$$\min_u\left\{\frac{1}{2}\|u \ast k - f\|_2^2\right\}$$</p></span>
        <ul>
 	 <li>Differentiable, therefore widely used.</li>
 	 <li>Works well with Gaussian noise.</li>
        </ul>
+       </div>
      </section>
      <section>
        <h4>Cost Functions</h4>
+       <div style="font-size:75%">
        <span><p>$\ell_1$-Norm[<a href="#/references">CP11</a>]:</p></span>
        <span><p>$$\min_u\left\{\|u \ast k - f\|_1\right\}$$</p></span>
        <ul>
 	 <li>Known to work well for Poisson and Gaussian noise.</li>
        </ul>
+       </div>
      </section>
      <section>
        <h4>Cost Functions</h4>
+       <div style="font-size:75%">
        <span><p>Kullback-Leibler Divergence[<a href="#/references">SCJ12</a>]:</p></span>
        <span><p style="font-size:75%">$$D_{KL}(f|u\ast k) := \int_\Omega \left(
 	 f\cdot log\left(\frac{f}{u
@@ -366,9 +460,10 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	 <li>Describes how much information is lost if $u \ast k$ is used to
 	   approximate $f$.</li>
        </ul>
+       </div>
      </section>
      <section>
-       <ul>
+       <ul style="font-size:75%">
 	 <li>TV - $\ell_1$-Norm</li>
 	 <li>TV$_{Huber}$ - $\ell_1$-Norm</li>
 	 <li>TGV$^2$ - $\ell_1$-Norm</li>
@@ -381,7 +476,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        </ul>
      </section>
    </section>
-   <section>
+  <!-- <section>
      <h3>Implementation</h3>
      <section>
        <ul>
@@ -392,12 +487,12 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      <section>
        <h4>ImageJ-Ops</h4>
      </section>
-   </section>
+  </section>-->
    <section>
      <h3>Experimental Setup</h3>
      <section>
        <h4>Image Formation Process</h4>
-       <div id="left">
+       <div style="font-size:75%" id="left">
 	    <ul>
 	      <li class="fragment" data-fragment-index="1">Ground truth image.</span></li>
 	      <li class="fragment" data-fragment-index="2">Convolved with a PSF.</li>
@@ -409,7 +504,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	    </ul>
 	  </div>
 	  <div id="right">
-	    <div style="position:relative; width:300px; height:500px; margin:0 auto;">
+	    <div style="position:relative; width:400px; height:500px; margin:0 auto;">
 	      <span class="fragment fade-out" data-fragment-index="2">
 		<img class="fragment" data-fragment-index="1" width="300px"
 		height="300px" src="images/groundtruth.png" style="position:absolute;top:0;left:0;" />
@@ -437,8 +532,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		height="300px" src="images/gtNoise.png" style="position:absolute;top:0;left:0;" />
 		<div class="fragment" data-fragment-index="4" width="300px"
 		  style="position:absolute;top:312px;left:5px;font-size:large;width:290px"><p>Figure
-		  x: Gaussian noise <span style="font-size:80%">$(\mu = 0,
-		    \sigma = 0.1)$</span> is applied.</p></div>
+		  x: Apply noise.</p></div>
 	      </span>
 	      <span class="fragment" data-fragment-index="5">
 		<img class="fragment" data-fragment-index="5" width="300px"
@@ -479,7 +573,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <img width="150px"
 		height="150px" src="images/views/sigma_0_1_sample_factor_1_1.png" style="position:absolute;top:0;left:0;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.1)$.</span></p></div> 
@@ -488,7 +583,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		src="images/views/sigma_0_01_sample_factor_1_1.png"
   style="position:absolute;top:0;left:200px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.01)$.</span></p></div>
@@ -497,7 +593,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		src="images/views/sigma_0_001_sample_factor_1_1.png"
   style="position:absolute;top:0;left:400px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.001)$.</span></p></div>
@@ -508,21 +605,24 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <img width="150px"
 		height="150px" src="images/views/SNR_10_sample_factor_1_1.png" style="position:absolute;top:0;left:0;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: SNR = 10.</p></div> 
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_100_sample_factor_1_1.png"
   style="position:absolute;top:0;left:200px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: SNR = 100.</p></div>
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_1000_sample_factor_1_1.png"
   style="position:absolute;top:0;left:400px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: SNR = 1000.</p></div>
 
 
@@ -538,7 +638,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <img width="150px"
 		height="150px" src="images/views/sigma_0_1_sample_factor_2_1.png" style="position:absolute;top:0;left:0;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.1)$.</span></p></div> 
@@ -547,7 +648,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		src="images/views/sigma_0_01_sample_factor_2_1.png"
   style="position:absolute;top:0;left:200px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.01)$.</span></p></div>
@@ -556,7 +658,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		src="images/views/sigma_0_001_sample_factor_2_1.png"
   style="position:absolute;top:0;left:400px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.001)$.</span></p></div>
@@ -567,21 +670,24 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <img width="150px"
 		height="150px" src="images/views/SNR_10_sample_factor_2_1.png" style="position:absolute;top:0;left:0;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: SNR = 10.</p></div> 
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_100_sample_factor_2_1.png"
   style="position:absolute;top:0;left:200px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: SNR = 100.</p></div>
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_1000_sample_factor_2_1.png"
   style="position:absolute;top:0;left:400px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: SNR = 1000.</p></div>
 
 
@@ -597,7 +703,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <img width="150px"
 		height="150px" src="images/views/sigma_0_1_sample_factor_4_1.png" style="position:absolute;top:0;left:0;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.1)$.</span></p></div> 
@@ -606,7 +713,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		src="images/views/sigma_0_01_sample_factor_4_1.png"
   style="position:absolute;top:0;left:200px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.01)$.</span></p></div>
@@ -615,7 +723,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		src="images/views/sigma_0_001_sample_factor_4_1.png"
   style="position:absolute;top:0;left:400px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.001)$.</span></p></div>
@@ -626,21 +735,24 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <img width="150px"
 		height="150px" src="images/views/SNR_10_sample_factor_4_1.png" style="position:absolute;top:0;left:0;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: SNR = 10.</p></div> 
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_100_sample_factor_4_1.png"
   style="position:absolute;top:0;left:200px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: SNR = 100.</p></div>
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_1000_sample_factor_4_1.png"
   style="position:absolute;top:0;left:400px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: SNR = 1000.</p></div>
 
 
@@ -656,7 +768,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <img width="150px"
 		height="150px" src="images/views/sigma_0_1_sample_factor_8_1.png" style="position:absolute;top:0;left:0;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.1)$.</span></p></div> 
@@ -665,7 +778,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		src="images/views/sigma_0_01_sample_factor_8_1.png"
   style="position:absolute;top:0;left:200px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.01)$.</span></p></div>
@@ -674,7 +788,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		src="images/views/sigma_0_001_sample_factor_8_1.png"
   style="position:absolute;top:0;left:400px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.001)$.</span></p></div>
@@ -685,21 +800,24 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <img width="150px"
 		height="150px" src="images/views/SNR_10_sample_factor_8_1.png" style="position:absolute;top:0;left:0;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: SNR = 10.</p></div> 
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_100_sample_factor_8_1.png"
   style="position:absolute;top:0;left:200px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: SNR = 100.</p></div>
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_1000_sample_factor_8_1.png"
   style="position:absolute;top:0;left:400px;" />
        <div width="150px"
-						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p>Figure
+						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
+						style="text-align:left;">Figure
 						x: SNR = 1000.</p></div>
 
 
@@ -709,13 +827,13 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      </section>
      <section>
        <h4>Parameters</h4>
-       <ul>
+       <ul style="font-size:75%">
 	<li>TV Parameters: <span style="font-size:80%">$\lambda \in [0.01, 0.1,
-	    0.2, \dots, 1.0]$</span>.</li>
+	    0.2, \dots, 1.0]$.</span></li>
 	<li>TV-Huber Parameters: <span style="font-size:80%">$\lambda \in [0.01, 0.1, 0.2, \dots, 1.0],
-	    \alpha = 0.05$</span>.</li>
+	    \alpha = 0.05$.</span></li>
 	<li>TGV Parameters: <span style="font-size:80%">$(\alpha, \beta) \in [(0.01, 0.02), (0.1, 0.2),
-	    \dots, (1.0, 2.0)]$</span>.</li>
+	    \dots, (1.0, 2.0)]$.</span></li>
 	<li>Experimental setup is available under
 	  github.com/tibuch/FO-PDSolver#experiments.</li>
       </ul>
@@ -725,8 +843,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      <h3>Evaluation</h3>
      <section>
        <h4>Gaussian Noise</h4>
-       <table style="font-size:50%">
-	 <tr>
+       <table style="font-size:45%">
+	 <tr style="border-top:1px solid">
 	   <td></td>
 	   <td></td>
 	   <td colspan="2" style="border-left:1px solid">Richardson-Lucy</td>
@@ -775,89 +893,299 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	   <td style="text-align:right;">0.3</td>
 	   <td style="text-align:right;">33.366</td>
 	 </tr>
-	 <tr>
-	   <td rowspan="4" style="vertical-align:middle;font-size:80%">$\mu =
-	     0.0, \sigma = 0.1$</td>
-	   <td style="text-align:right;">1</td>
-	   <td style="text-align:right;border-left:1px solid;">0.8</td>
-	   <td style="text-align:right;">31.228</td>
-	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
-	   <td style="text-align:right;">0.1</td>
-	   <td style="text-align:right;">39.459</td>
-	 </tr>
-	 <tr>
-	   <td style="text-align:right;">2</td>
-	   <td style="text-align:right;border-left:1px solid;">0.7</td>
-	   <td style="text-align:right;">31.122</td>
-	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
-	   <td style="text-align:right;">0.2</td>
-	   <td style="text-align:right;">37.042</td>
-	 </tr>
-	 <tr>
-	   <td style="text-align:right;">4</td>
-	   <td style="text-align:right;border-left:1px solid;">0.9</td>
-	   <td style="text-align:right;">30.420</td>
-	   <td style="border-left:1px solid;">TV, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
-	   <td style="text-align:right;">0.2</td>
-	   <td style="text-align:right;">36.066</td>
-	 </tr>
-	 <tr style="border-bottom:1px solid;">
-	   <td style="text-align:right;">8</td>
-	   <td style="text-align:right;border-left:1px solid;">1.0</td>
-	   <td style="text-align:right;">29.048</td>
-	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
-	   <td style="text-align:right;">0.3</td>
-	   <td style="text-align:right;">33.366</td>
-	 </tr>
+	 <!-- Gaussian Noise 0.01 -->
 	 <tr>
 	   <td rowspan="4" style="vertical-align:middle;font-size:80%">$\mu =
 	     0.0, \sigma = 0.01$</td>
 	   <td style="text-align:right;">1</td>
-	   <td style="text-align:right;border-left:1px solid;">0.8</td>
-	   <td style="text-align:right;">31.228</td>
+	   <td style="text-align:right;border-left:1px solid;">0.1</td>
+	   <td style="text-align:right;">38.422</td>
 	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
 	   <td style="text-align:right;">0.1</td>
-	   <td style="text-align:right;">39.459</td>
+	   <td style="text-align:right;">41.112</td>
 	 </tr>
 	 <tr>
 	   <td style="text-align:right;">2</td>
-	   <td style="text-align:right;border-left:1px solid;">0.7</td>
-	   <td style="text-align:right;">31.122</td>
+	   <td style="text-align:right;border-left:1px solid;">0.2</td>
+	   <td style="text-align:right;">37.840</td>
 	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
-	   <td style="text-align:right;">0.2</td>
-	   <td style="text-align:right;">37.042</td>
+	   <td style="text-align:right;">0.1</td>
+	   <td style="text-align:right;">40.630</td>
 	 </tr>
 	 <tr>
 	   <td style="text-align:right;">4</td>
-	   <td style="text-align:right;border-left:1px solid;">0.9</td>
-	   <td style="text-align:right;">30.420</td>
+	   <td style="text-align:right;border-left:1px solid;">0.3</td>
+	   <td style="text-align:right;">36.498</td>
 	   <td style="border-left:1px solid;">TV, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
 	   <td style="text-align:right;">0.2</td>
-	   <td style="text-align:right;">36.066</td>
+	   <td style="text-align:right;">39.071</td>
 	 </tr>
 	 <tr style="border-bottom:1px solid;">
 	   <td style="text-align:right;">8</td>
-	   <td style="text-align:right;border-left:1px solid;">1.0</td>
-	   <td style="text-align:right;">29.048</td>
+	   <td style="text-align:right;border-left:1px solid;">0.5</td>
+	   <td style="text-align:right;">33.736</td>
 	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
 	   <td style="text-align:right;">0.3</td>
-	   <td style="text-align:right;">33.366</td>
+	   <td style="text-align:right;">35.370</td>
 	 </tr>
-
+	 <!-- Gaussian Noise 0.001 -->
+	 <tr>
+	   <td rowspan="4" style="vertical-align:middle;font-size:80%">$\mu =
+	     0.0, \sigma = 0.001$</td>
+	   <td style="text-align:right;">1</td>
+	   <td style="text-align:right;border-left:1px solid;">0.01</td>
+	   <td style="text-align:right;">42.072</td>
+	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">0.01</td>
+	   <td style="text-align:right;">42.797</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:right;">2</td>
+	   <td style="text-align:right;border-left:1px solid;">0.01</td>
+	   <td style="text-align:right;">41.631</td>
+	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">0.1</td>
+	   <td style="text-align:right;">42.081</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:right;">4</td>
+	   <td style="text-align:right;border-left:1px solid;">0.1</td>
+	   <td style="text-align:right;">39.479</td>
+	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">0.1</td>
+	   <td style="text-align:right;">39.872</td>
+	 </tr>
+	 <tr style="border-bottom:1px solid;">
+	   <td style="text-align:right;">8</td>
+	   <td style="text-align:right;border-left:1px solid;">0.5</td>
+	   <td style="text-align:right;">35.300</td>
+	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">0.3</td>
+	   <td style="text-align:right;">35.155</td>
+	 </tr>
        </table>
+       <div style="text-align:center;"><p style="font-size:45%">Table 1:
+	 Reconstruction results of the Gaussian noise datasets.</p></div>
+     </section>
+     <section>
+      <p style="font-size:90%">Gaussian Noise <span style="font-size:80%">$(\mu = 0.0, \sigma =
+	  0.1)$,</span> Downsample Factor = 1</p>
+      <div style="position:absolute;top:75px;left:96px; width:692px; height:532px; margin:0
+       auto;">
+	<img width="692px"
+		height="532px" src="images/gaussianNoise_sigma_0.1_sf1.png" style="position:absolute;top:0;left:0;" />
+	<div width="692px"
+	  style="position:absolute;top:450px;left:5px;font-size:large;width:682px"><p>Figure
+						x: Performance visualization of
+	the best performing variational multiview deconvolution model and the
+	Richardson-Lucy multiview deconvolution.</p></div> 
+      </div>
+     </section>
+     <section>
+      <p style="font-size:90%">Gaussian Noise <span style="font-size:80%">$(\mu = 0.0, \sigma =
+	  0.01)$,</span> Downsample Factor = 4</p>
+      <div style="position:absolute;top:75px;left:96px; width:692px; height:532px; margin:0
+       auto;">
+	<img width="692px"
+		height="532px" src="images/gaussianNoise_sigma_0.01_sf4.png" style="position:absolute;top:0;left:0;" />
+	<div width="692px"
+	  style="position:absolute;top:450px;left:5px;font-size:large;width:682px"><p>Figure
+						x: Performance visualization of
+	the best performing variational multiview deconvolution model and the
+	Richardson-Lucy multiview deconvolution.</p></div> 
+      </div>
+     </section>
+     <section>
+      <p style="font-size:90%">Gaussian Noise <span style="font-size:80%">$(\mu = 0.0, \sigma =
+	  0.001)$,</span> Downsample Factor = 2</p>
+      <div style="position:absolute;top:75px;left:96px; width:692px; height:532px; margin:0
+       auto;">
+	<img width="692px"
+		height="532px" src="images/gaussianNoise_sigma_0.001_sf2.png" style="position:absolute;top:0;left:0;" />
+	<div width="692px"
+	  style="position:absolute;top:450px;left:5px;font-size:large;width:682px"><p>Figure
+						x: Performance visualization of
+	the best performing variational multiview deconvolution model and the
+	Richardson-Lucy multiview deconvolution.</p></div> 
+      </div>
      </section>
      <section>
        <h4>Poisson Noise</h4>
+       <table style="font-size:45%">
+	 <tr style="border-top:1px solid">
+	   <td></td>
+	   <td></td>
+	   <td colspan="2" style="border-left:1px solid">Richardson-Lucy</td>
+	   <td colspan="3" style="border-left:1px solid">First-Order Primal-Dual Solver</td>
+	 </tr>
+	 <tr style="border-bottom:1px solid">
+	   <td>Parameters</td>
+	   <td style="text-align:right;">DS</td>
+	   <td style="font-size:80%;text-align:right;border-left:1px solid;">$\lambda$</td>
+	   <td style="text-align:right">PSNR</td>
+	   <td style="border-left:1px solid;">Configuration</td>
+	   <td style="font-size:80%;text-align:right;">$\lambda$</td>
+	   <td style="text-align:right">PSNR</td>
+	 </tr>
+	 <!-- Poisson Noise SNR = 10 -->
+	 <tr>
+	   <td rowspan="4" style="vertical-align:middle;font-size:80%">SNR = 10</td>
+	   <td style="text-align:right;">1</td>
+	   <td style="text-align:right;border-left:1px solid;">0.1</td>
+	   <td style="text-align:right;">28.506</td>
+	   <td style="border-left:1px solid;">TV, Squared <span
+	       style="font-size:80%;">$\ell_2$</span>-Norm</td>
+	   <td style="text-align:right;">0.01</td>
+	   <td style="text-align:right;">28.568</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:right;">2</td>
+	   <td style="text-align:right;border-left:1px solid;">0.1</td>
+	   <td style="text-align:right;">28.640</td>
+	   <td style="border-left:1px solid;">TV, Squared <span
+	       style="font-size:80%;">$\ell_2$</span>-Norm</td>
+	   <td style="text-align:right;">0.01</td>
+	   <td style="text-align:right;">28.818</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:right;">4</td>
+	   <td style="text-align:right;border-left:1px solid;">0.2</td>
+	   <td style="text-align:right;">28.661</td>
+	   <td style="border-left:1px solid;">TV-Huber, Squared <span
+	       style="font-size:80%;">$\ell_2$</span>-Norm</td>
+	   <td style="text-align:right;">0.01</td>
+	   <td style="text-align:right;">29.017</td>
+	 </tr>
+	 <tr style="border-bottom:1px solid;">
+	   <td style="text-align:right;">8</td>
+	   <td style="text-align:right;border-left:1px solid;">0.3</td>
+	   <td style="text-align:right;">27.332</td>
+	   <td style="border-left:1px solid;">TV, Squared <span
+	       style="font-size:80%;">$\ell_2$</span>-Norm</td>
+	   <td style="text-align:right;">0.01</td>
+	   <td style="text-align:right;">27.926</td>
+	 </tr>
+	 <!-- Poisson Noise SNR = 100 -->
+	 <tr>
+	   <td rowspan="4" style="vertical-align:middle;font-size:80%">SNR = 100</td>
+	   <td style="text-align:right;">1</td>
+	   <td style="text-align:right;border-left:1px solid;">0.01</td>
+	   <td style="text-align:right;">40.795</td>
+	   <td style="border-left:1px solid;">TGV, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">0.01</td>
+	   <td style="text-align:right;">40.301</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:right;">2</td>
+	   <td style="text-align:right;border-left:1px solid;">0.01</td>
+	   <td style="text-align:right;">39.423</td>
+	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">0.1</td>
+	   <td style="text-align:right;">39.279</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:right;">4</td>
+	   <td style="text-align:right;border-left:1px solid;">0.1</td>
+	   <td style="text-align:right;">38.663</td>
+	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">0.1</td>
+	   <td style="text-align:right;">39.121</td>
+	 </tr>
+	 <tr style="border-bottom:1px solid;">
+	   <td style="text-align:right;">8</td>
+	   <td style="text-align:right;border-left:1px solid;">0.2</td>
+	   <td style="text-align:right;">35.343</td>
+	   <td style="border-left:1px solid;">TV, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">0.2</td>
+	   <td style="text-align:right;">36.108</td>
+	 </tr>
+	 <!-- Poisson Noise SNR = 1000 -->
+	 <tr>
+	   <td rowspan="4" style="vertical-align:middle;font-size:80%">SNR =
+	     1000</td>
+	   <td style="text-align:right;">1</td>
+	   <td style="text-align:right;border-left:1px solid;">0.01</td>
+	   <td style="text-align:right;">42.734</td>
+	   <td style="border-left:1px solid;">TGV, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">0.01</td>
+	   <td style="text-align:right;">43.021</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:right;">2</td>
+	   <td style="text-align:right;border-left:1px solid;">0.01</td>
+	   <td style="text-align:right;">42.458</td>
+	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">0.1</td>
+	   <td style="text-align:right;">42.172</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:right;">4</td>
+	   <td style="text-align:right;border-left:1px solid;">0.1</td>
+	   <td style="text-align:right;">39.643</td>
+	   <td style="border-left:1px solid;">TV-Huber, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">0.1</td>
+	   <td style="text-align:right;">39.490</td>
+	 </tr>
+	 <tr style="border-bottom:1px solid;">
+	   <td style="text-align:right;">8</td>
+	   <td style="text-align:right;border-left:1px solid;">0.3</td>
+	   <td style="text-align:right;">35.678</td>
+	   <td style="border-left:1px solid;">TV, <span style="font-size:80%;">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">0.3</td>
+	   <td style="text-align:right;">35.673</td>
+	 </tr>
+       </table>
+       <div style="text-align:center;"><p style="font-size:45%">Table 2:
+	 Reconstruction results of the Poisson noise datasets.</p></div>
+     </section>
+     <section>
+      <p style="font-size:90%">Poisson SNR = 10, Downsample Factor = 1</p>
+      <div style="position:absolute;top:75px;left:96px; width:692px; height:532px; margin:0
+       auto;">
+	<img width="692px"
+		height="532px" src="images/poissonNoise_SNR10_sf1.png" style="position:absolute;top:0;left:0;" />
+	<div width="692px"
+	  style="position:absolute;top:450px;left:5px;font-size:large;width:682px"><p>Figure
+						x: Performance visualization of
+	the best performing variational multiview deconvolution model and the
+	Richardson-Lucy multiview deconvolution.</p></div> 
+      </div>
+     </section>
+     <section>
+      <p style="font-size:90%">Poisson Noise SNR = 100, Downsample Factor = 8</p>
+      <div style="position:absolute;top:75px;left:96px; width:692px; height:532px; margin:0
+       auto;">
+	<img width="692px"
+		height="532px" src="images/poissonNoise_SNR100_sf8.png" style="position:absolute;top:0;left:0;" />
+	<div width="692px"
+	  style="position:absolute;top:450px;left:5px;font-size:large;width:682px"><p>Figure
+						x: Performance visualization of
+	the best performing variational multiview deconvolution model and the
+	Richardson-Lucy multiview deconvolution.</p></div> 
+      </div>
+     </section>
+     <section>
+      <p style="font-size:90%">Poisson Noise SNR = 1000, Downsample Factor = 1</p>
+      <div style="position:absolute;top:75px;left:96px; width:692px; height:532px; margin:0
+       auto;">
+	<img width="692px"
+		height="532px" src="images/poissonNoise_SNR1000_sf1.png" style="position:absolute;top:0;left:0;" />
+	<div width="692px"
+	  style="position:absolute;top:450px;left:5px;font-size:large;width:682px"><p>Figure
+						x: Performance visualization of
+	the best performing variational multiview deconvolution model and the
+	Richardson-Lucy multiview deconvolution.</p></div> 
+      </div>
      </section>
      <section>
        <h4>PSNR Interpretation</h4>
-       <div style="position:absolute;top:100px;left:128px;width:702px; height:500px;
+      <div style="position:absolute;top:100px;left:128px;width:702px; height:500px;
        margin:0 auto;">
-	 <img class="fragment" data-fragment-index="1" width="702px"
+	 <img width="702px"
 						height="397px"
       src="images/PSNR_Reasoning.png"
       style="position:absolute;top:0px;left:0px" />
-	 <div class="fragment" data-fragment-index="1" width="692px"
+	 <div width="692px"
 						style="position:absolute;top:409px;left:5px;font-size:large;width:692px"><p>Figure
 						x: Mapping of the PSNRs from the
 						reconstructed images and the
@@ -872,11 +1200,98 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      </section>
      <section>
        <h4>Runtime</h4>
+       <table style="font-size:50%">
+	 <tr style="border-bottom:1px solid;">
+	   <td style="text-align:left;">Method</td>
+	   <td style="text-align:right;">Initialization</td>
+	   <td style="text-align:right;">Warm-Up</td>
+	   <td style="text-align:right">Benchmark</td>
+	   <td style="text-align:right;">Time/Iter.</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:left;">Richardson-Lucy</td>
+	   <td style="text-align:right;">00:04.780</td>
+	   <td style="text-align:right;">00:14.882</td>
+	   <td style="text-align:right;">04:28.406</td>
+	   <td style="text-align:right;">00:01.34</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:left;">TV, <span
+	style="font-size:80%">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">00:04.703</td>
+	   <td style="text-align:right;">00:22.112</td>
+	   <td style="text-align:right;">06:57.880</td>
+	   <td style="text-align:right;">00:02.09</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:left;">TV, Squared <span
+	style="font-size:80%">$\ell_2$</span>-Norm</td>
+	   <td style="text-align:right;">00:02.936</td>
+	   <td style="text-align:right;">00:21.685</td>
+	   <td style="text-align:right;">06:50.326</td>
+	   <td style="text-align:right;">00:02.05</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:left;">TV, KL-Divergence</td>
+	   <td style="text-align:right;">00:03.352</td>
+	   <td style="text-align:right;">00:23.740</td>
+	   <td style="text-align:right">07:30.685</td>
+	   <td style="text-align:right;">00:02.25</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:left;">TV-Huber, <span
+	style="font-size:80%">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">00:02.924</td>
+	   <td style="text-align:right;">00:21.902</td>
+	   <td style="text-align:right;">07:12.094</td>
+	   <td style="text-align:right;">00:02.16</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:left;">TV-Huber, Squared <span
+	style="font-size:80%">$\ell_2$</span>-Norm</td>
+	   <td style="text-align:right;">00:02.897</td>
+	   <td style="text-align:right;">00:22.029</td>
+	   <td style="text-align:right;">07:06.958</td>
+	   <td style="text-align:right;">00:02.13</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:left;">TV-Huber, KL-Divergence</td>
+	   <td style="text-align:right;">00:03.321</td>
+	   <td style="text-align:right;">00:23.932</td>
+	   <td style="text-align:right;">07:47.760</td>
+	   <td style="text-align:right;">00:02.33</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:left;">TGV, <span
+	style="font-size:80%">$\ell_1$</span>-Norm</td>
+	   <td style="text-align:right;">00:07.230</td>
+	   <td style="text-align:right;">00:54.231</td>
+	   <td style="text-align:right;">17:34.859</td>
+	   <td style="text-align:right;">00:05.27</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:left;">TGV, Squared <span
+	style="font-size:80%">$\ell_2$</span>-Norm</td>
+	   <td style="text-align:right;">00:06.647</td>
+	   <td style="text-align:right;">00:53.966</td>
+	   <td style="text-align:right">17:26.928</td>
+	   <td style="text-align:right;">00:05.23</td>
+	 </tr>
+	 <tr>
+	   <td style="text-align:left;">TGV, KL-Divergence</td>
+	   <td style="text-align:right;">00:06.860</td>
+	   <td style="text-align:right;">00:55.799</td>
+	   <td style="text-align:right;">18:14.060</td>
+	   <td style="text-align:right;">00:05.47</td>
+	 </tr>
+       </table>
+       <div style="text-align:center;"><p style="font-size:50%">Table 3: Benchmark results of the different multiview
+	 deconvolution models.</p></div>
      </section>
    </section>
    <section>
      <h3>Summary</h3>
-     <ul>
+     <ul style="font-size:75%">
        <li>Variational multiview deconvolution models perform as good as
 	 Richardson-Lucy multiview deconvolution in terms of PSNR.</li>
        <li>For heavily distorted image data the variational multiview
@@ -889,7 +1304,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
    </section>
    <section>
      <h3>Future Work</h3>
-     <ul>
+     <ul style="font-size:75%">
        <li>Merge First-Order Primal-Dual Solver into ImageJ-Ops.</li>
        <li>Add GPU operations to ImageJ-Ops.</li>
        <li>Add further regularization terms.</li>
@@ -938,6 +1353,7 @@ Reveal.initialize({
   controls: true,
   // Transition style
   transition: 'none', // none/fade/slide/convex/concave/zoom
+  slideNumber: 'c/t',
   // Vertical centering of slides
   center: false,
   width: 960,
