@@ -74,6 +74,20 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	    </div>
 	  </div>
 	</section>
+	<section>
+	  <h3>Agenda</h3>
+	  <div style="font-size:75%">
+	    <ul>
+	      <li class="fragment">Introduction to Light Sheet Fluorescence
+		Microscopy</li>
+	      <li class="fragment">Multiview Reconstruction</li>
+	      <li class="fragment">3D Multiview Deconvolution</li>
+	      <li class="fragment">Evaluation & Experimental Setup</li>
+	      <li class="fragment">Results</li>
+	      <li class="fragment">Summary & Future Work</li>
+	    </ul>
+	  </div>
+	</section>
 	<!--<section>
    <h3>High Resolution Microscopy</h3>
    </section>-->
@@ -81,11 +95,22 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      <h3>Light Sheet Fluorescence Microscopy</h3>
      <div style="font-size:75%" id="left">
        <ul>
-	 <li>Light sheet thickness between $1\mu m - 10\mu m$.</li>
-	 <li>Live imaging.</li>
-	 <li>Non-isotropic resolution.</li>
-	 <li>Multiview acquisition.</li>
+	 <li class="fragment" data-fragment-index="1">Light sheet thickness between $1\mu m - 10\mu m$</li>
+	 <li class="fragment" data-fragment-index="2">Live imaging</li>
+	 <li class="fragment" data-fragment-index="3">Non-isotropic resolution</li>
+	 <li class="fragment" data-fragment-index="4">Multiview acquisition</li>
        </ul>
+     <div class="fragment" data-fragment-index="4" style="position:relative; width:400px; height:399px; margin:0 auto;">
+	 <img width="400px" height="299px" src="images/SPIM_Stacks.png"
+				    style="position:absolute;top:0px;left:0;" />
+	 <div width="400px"
+       style="position:absolute;top:301px;left:5px;font-size:large;width:390px"><p>Figure
+       7: Multiview acquisition.</p></div>
+       <div width="400px"
+       style="position:absolute;top:321px;left:5px;font-size:small;width:390px"><p>Source:
+       Bachelor Arbeit -  Optimierte Registrierung für diSPIM im Hochdurchsatz
+       (Tim-Oliver Buchholz, 2016)</p></div>
+     </div>
      </div>
      <div id="right">
        <div style="position:relative; width:488px; height:588px; margin:0 auto;">
@@ -107,7 +132,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				    style="position:absolute;top:0px;left:110px;" />
 	 <div width="732px"
        style="position:absolute;top:212px;left:5px;font-size:large;width:732px"><p>Figure
-       7: Non-isotropic resolution of the individual views. (A) the lateral
+       8: Non-isotropic resolution of the individual views. (A) the lateral
        resolution of the first view  and (B) the axial resolution of the
        second view.</p></div>
 	 <div width="732px"
@@ -118,13 +143,13 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 									     style="position:absolute;top:300px;left:0;" />
 	 <div class="fragment" data-fragment-index="1" width="772px"
 						style="position:absolute;top:492px;left:5px;font-size:large;width:732px"><p>Figure
-						8: Multiview reconstruction of two acquired views. First the views are
+						9: Multiview reconstruction of two acquired views. First the views are
 						registered and then fused.</p></div>
        </div>
 
      </section>
      <section>
-       <h4>Multiview Registration: Bead Based</h4>
+       <h4>Bead-Based Multiview Registration</h4>
        <div style="font-size:75%">
 	 <ol style="position:absolute;left:20px">
 	   <li class="fragment" data-fragment-index="1">Point cloud extraction.</li>
@@ -139,7 +164,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				      style="position:absolute;top:0px;left:0px;" />
 	   <div class="fragment" data-fragment-index="1" width="332px"
 						  style="position:absolute;top:170px;left:5px;font-size:large;width:322px"><p>Figure
-						  9: Sub-resolution point extraction from Point Spread Function (PSF).</p></div>
+						  10: Sub-resolution point extraction from Point Spread Function (PSF).</p></div>
 	 </div>
 	 <div class="fragment" data-fragment-index="2" style="position:absolute;
 	 width:332px; height:500px; top:0px;left:348px;">
@@ -147,7 +172,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				      style="position:absolute;top:0px;left:0px;" />
 	   <div class="fragment" data-fragment-index="2" width="332px"
 						  style="position:absolute;top:170px;left:5px;font-size:large;width:322px"><p>Figure
-						  10: Extraction of corresponding
+						  11: Extraction of corresponding
 						  points.</p></div>
 	 </div>
 	 <div class="fragment" data-fragment-index="3" style="position:absolute;
@@ -156,7 +181,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				      style="position:absolute;top:0px;left:0px;" />
 	   <div class="fragment" data-fragment-index="3" width="332px"
 						  style="position:absolute;top:170px;left:-79px;font-size:large;width:322px"><p>Figure
-						  11: Transformation to a global
+						  12: Transformation to a global
 						  coordinate system.</p></div>
 	 </div>
 	 <div width="732px"
@@ -182,20 +207,20 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				      style="position:absolute;top:0px;left:150px;" />
 	   <div width="300px"
 	 style="position:absolute;top:162px;left:30px;font-size:large;width:290px"><p>Figure
-	 12: The registered views.</p></div>
+	 13: The registered views.</p></div>
 
 	   <img class="fragment" data-fragment-index="1" width="150px" height="150px" src="images/fusion.png"
 									       style="position:absolute;top:0px;left:435px;" />
 	   <div class="fragment" data-fragment-index="1" width="300px"
 						  style="position:absolute;top:162px;left:395px;font-size:large;width:290px"><p>Figure
-						  13: Fusion of the views.</p></div>
+						  14: Fusion of the views.</p></div>
 	   <img class="fragment" data-fragment-index="2" width="150px"
 						  height="150px"
 	src="images/multiviewDeconvolution.png"
  style="position:absolute;top:0px;left:720px;" />
 	   <div class="fragment" data-fragment-index="2" width="300px"
 						  style="position:absolute;top:162px;left:662px;font-size:large;width:290px"><p>Figure
-						  14: Multiview deconvolution.</p></div>
+						  15: Multiview deconvolution.</p></div>
 
 	 </div>
        </div>
@@ -217,7 +242,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				      style="position:absolute;top:0px;left:460px;" />
 	   <div width="554px"
 	 style="position:absolute;top:256px;left:5px;font-size:large;width:694px"><p>Figure
-	 15: Convolution of an image with a kernel, where $\ast$ denotes the
+	 16: Convolution of an image with a kernel, where $\ast$ denotes the
 	 convolution operation.</p></div>
 	 </div>
        </div>
@@ -237,35 +262,44 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <h4>Richardson-Lucy</h4>
        <div style="font-size:75%;">
 	 <p>Let <span style="font-size:80%;">$f$</span> be the degraded
-	 (convolved) image, <span style="font-size:80%;">$g$</span> the
+	 (convolved) image, <span style="font-size:80%;">$u$</span> the
 	 underlying ground truth and <span style="font-size:80%;">$k$</span> the
 	 PSF [<a href="#/references">Luc74, Ric72</a>].</p>
 	 <p>Bayes' Theorem states:</p>
-	 <span style="font-size:80%;">$$P(g|f) = \frac{P(f|g)P(g)}{P(f)} =
-	   \frac{P(f|g)P(g)}{P(g \ast k)}$$</span>
-	 <p>Resulting in the iterative update scheme:</p>
-	 <span style="font-size:80%;">$$g_{i+1} = g_i \left( \frac{f}{g_i \ast
-	   k} \ast \bar{k} \right)$$</span>
-	 <p>Where <span style="font-size:80%">$\bar{k}$</span> is the flipped
-	 convolution kernel <span style="font-size:80%">$k$.</span>
+	 <span style="font-size:80%;">$$P(u|f) = \frac{P(f|u)P(u)}{P(f)} =
+	   \frac{P(f|u)P(u)}{P(u \ast k)}$$</span>
+	 <p>From which an iterative update scheme can be
+	 derived.</p>
        </div>
      </section>
      <section>
        <h4>Variational Models</h4>
        <div style="font-size:75%;">
-	 <p>The goal is to find the underlying image <span
+	<!-- <p>The goal is to find the underlying image <span
 	   style="font-size:80%;">$u$</span> which convolved with kernel <span
 	   style="font-size:80%;">$k$</span> is most similar to the observation
 	 <span style="font-size:80%;">$f$.</span></p>
-	 <p>Written as functional:</p>
+	<p>Written as functional:</p>-->
 	 <span style="font-size:80%;">$$E(u) = \|u \ast k - f\|_1 + \|\nabla
 	   u\|_{2,1}$$</span>
-	 <p>With <span style="font-size:80%;">$\|\nabla u\|_{2,1}$</span> as
+	 <p>Where <span style="font-size:80%;">$u$</span> is the reconstructed
+	 image, <span style="font-size:80%;">$f$</span> is the observed image
+	 and <span style="font-size:80%;">$k$</span> is the PSF. <span
+	   style="font-size:80%;">$\|\nabla u\|_{2,1}$</span> is added as
 	 regularization term to suppress noise [<a href="#/references">CP11</a>].</p>
-	 <p>The goal is to minimize this energy with respect to <span
-					    style="font-size:80%;">$u$</span></p>
-	 <span style="font-size:80%;">$$\min_u \{ \|u \ast k - f\|_1 + \|\nabla
-	   u\|_{2,1} \}$$</span> 
+	 <p class="fragment" data-fragment-index="1">The goal is to minimize this energy with respect to <span
+					    style="font-size:80%;">$u$:</span></p>
+	 <div class="fragment fade-out" data-fragment-index="2">
+	 <span style="position:absolute;left:270px;top:320px;" class="fragment" data-fragment-index="1"
+			 style="font-size:80%;">$$\min_u \{ \|u \ast
+			 k - f\|_1 + \|\nabla
+			 u\|_{2,1} \}$$</span> 
+	 </div>
+	 <span style="position:absolute;left:270px;top:320px;" class="fragment" data-fragment-index="2"
+			 style="font-size:80%;">$$\min_u \{ \underbrace{\|u \ast
+			 k - f\|_1 + \|\nabla
+			 u\|_{2,1}}_{\text{Sum of two convex functionals.}} \}$$</span> 
+
        </div>
      </section>
    </section>
@@ -274,7 +308,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
      <section>
        <h4>Energy Minimization Problem</h4>
        <table style="font-size:75%">
-	<tr class="fragment" data-fragment-index="1">
+	<tr>
 	  <td>Primal-Problem</td>
 	  <td><span style="font-size:80%;text-align:left;">$$\min_u \left\{ \|u\|_2\right\}$$</span></td>
 	</tr>
@@ -292,7 +326,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				    style="position:absolute;top:0px;left:0px;" />
 	 	  <div class="fragment" data-fragment-index="1" width="350px"
 						style="position:absolute;top:275px;left:5px;font-size:large;width:340px"><p>Figure
-						16: A convex minimization
+						17: A convex minimization
 						problem.</p></div>
 	  </div>
 	 <img class="fragment" data-fragment-index ="2"  width="350px"
@@ -300,105 +334,74 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	src="images/saddleProblem.png" style="position:absolute;top:0px;left:0px;" />
 	 <div class="fragment" data-fragment-index="2" width="350px"
 						style="position:absolute;top:275px;left:45px;font-size:large;width:340px"><p>Figure
-						17: A saddle point problem.</p></div>
+						18: A saddle point problem.</p></div>
        </div>
      </section>
      <section>
        <h4>First-Order Primal-Dual Algorithm</h4>
-       <table style="position:absolute;left:0px;font-size:75%">
-	 <tr>
-	   <td>Primal-Problem</td>
-	   <td><span style="font-size:80%;text-align:left;">$$\min_u \{F(K(u)) + G(u)\}$$</span></td>
-	 </tr>
-	 <tr>
-	   <td>Primal-Dual-Problem</td>
-	   <td><span style="font-size:80%;text-align:left;">$$\min_u \max_p \{\langle K(u), p\rangle + G(u) - F^\ast(p)\}$$</span></td>
-	 </tr>
+       <p style="font-size:75%">The first-order primal-dual algorithm proposed
+       by A. Chambolle and T. Pock [<a href="#/references">CP11</a>] is an
+       iterative scheme to find the saddle point.</p>
+       <table style="font-size:75%">
+	<tr>
+	  <td>Primal-Dual-Problem</td>
+	  <td><span style="font-size:80%;text-align:left;">$$\min_u \max_{\|p\|_2 \leq 1} \left\{
+	      \langle u, p \rangle \right\}$$</span></td>
+	</tr>
        </table>
-       <div style="position:absolute;left:15px;top:250px;width:900px;">
-	 <p style="font-size:75%">Solver [<a href="#/references">CP11</a>]:</p>
-	 <div style="position:absolute;left:20px;top:40px;width:900px;">
-	   <p style="font-size:75%"><span style="font-size:80%;text-align:left;">$p_{n+1} = \text{prox}_{\sigma F^\ast}(p_n +
-	     \sigma K \bar{u}_n)$</span></p>
-	   <p style="font-size:75%"><span style="font-size:80%;text-align:left;">$u_{n+1} = \text{prox}_{\tau G}(u_n + \tau K^\ast
-	     p_{n+1})$</span></p>
-	   <p style="font-size:75%"><span style="font-size:80%;text-align:left;">$\bar{u}_{n+1} = u_{n+1} +
-       \theta(u_{n+1} - u_n)$</span></p>
-	   <p style="font-size:75%">Initialize <span style="font-size:80%">$p_0,
-	     u_0$,</span> arbitrarily, set <span style="font-size:80%">$\bar{u}_0 =
-	     u_0$</span> and choose step sizes <span style="font-size:80%">$\sigma,
-	     \tau > 0$</span> and  <span style="font-size:80%">$\theta \in [0,
-	     1]$.</span>
-	 </div>
+       <div style="position:relative;align:center;
+	 width:350px; height:363px; margin:0 auto;">
+	 <div class="fragment fade-out" data-fragment-index="1">
+	 <img width="350px"
+						  height="263px"
+	src="images/saddleProblem.png"
+				    style="position:absolute;top:0px;left:0px;" />
+	 	  <div width="350px"
+						style="position:absolute;top:275px;left:5px;font-size:large;width:340px"><p>Figure
+						18: A saddle point problem.</p></div>
+	  </div>
+	 <img class="fragment" data-fragment-index ="1"  width="350px"
+						  height="263px"
+	src="images/fopdSteps.png" style="position:absolute;top:0px;left:0px;" />
+	 <div class="fragment" data-fragment-index="1" width="350px"
+						style="position:absolute;top:275px;left:0px;font-size:large;width:340px"><p>Figure
+						19: Descent and ascent steps of
+						the first-order primal-dual
+						algorithm.</p></div>
        </div>
-     </section>
-     <section>
-       <h4>Convex Conjugate</h4>
-       <p style="font-size:75%">For <span style="font-size:80%">$f \in conv(\mathcal{V})$</span> the
-       convex conjugate <span style="font-size:80%">$f^\ast : \mathcal{V}^\ast
-	 \rightarrow \mathbb{R} \cup \{\infty\}$</span> is defined as:</p>
-       <p style="font-size:75%"><span style="font-size:80%;text-align:left;">$$f^\ast (\phi) := \sup_{v \in \mathcal{V}} \{\langle v, \phi \rangle
-	 - f(v)\}$$</span></p>
-     </section>
-     <section>
-       <h4>Proximity Operator</h4>
-       <p style="font-size:75%">The proximity operator <span
-	  style="font-size:80%">$\text{prox}_{\tau H}(x)$</span> for a convex
-	functional <span style="font-size:80%">$H$</span> and step size <span
-		  style="font-size:80%">$\tau$</span> is defined as:</p>
-       <p style="font-size:75%"><span style="font-size:80%;text-align:left;">$$\text{prox}_{\tau H}(x) := \min_y \left\{
-	 \frac{(y - x)^2}{2\tau} + H(y)\right\}$$</span></p>
-       <ul style="font-size:75%;">
-	 <li>Can be difficult to calculate.</li>
-	 <li>More robust than the gradient regarding the step size.</li>
-	 <li>Can be calculated for non-differentiable objectives.</li>
-       </ul>
-     </section>
-     <section>
-       <h4>Adjoint Operator</h4>
-       <p style="font-size:75%">The adjoint operator <span
-	  style="font-size:80%">$K^\ast : \mathcal{W} \rightarrow
-	  \mathcal{V}$</span> of the linear operator <span
-   style="font-size:80%">$K: \mathcal{V} \rightarrow \mathcal{W}$</span> is defined as:</p>
-       <p style="font-size:75%"><span style="font-size:80%;text-align:left;">$$(Kx, y)_\mathcal{W} = (x, K^\ast
-	 y)_\mathcal{V} \: \forall x \in \mathcal{V}, y \in \mathcal{W}$$</span></p>
-       <ul style="font-size:75%;">
-	 <li><span style="font-size:80%;">$(\nabla u, v) =
-	     (u,-\text{div}(v))$</span></li>
-	 <li><span style="font-size:80%;">$(u \ast k, v) = (u, v \ast
-	     \bar{k})$,</span> where <span
-	    style="font-size:80%;">$\bar{k}$</span> is the flipped kernel <span
-     style="font-size:80%;">$k$.</span></li>
-       </ul>
      </section>
    </section>
    <section>
      <h3>Variational Multiview Deconvolution</h3>
      <section>
        <h4>Energy Term</h4>
-       <p style="font-size:75%;"><span
-	 style="font-size:80%;text-align:left;">$$E(u) = \lambda R(u) +
-	 \sum_{j=1}^m T(u \ast k_j, f^j_\delta)$$</span></p>
-       <ul style="font-size:75%">
-	 <li><span style="font-size:80%;text-align:left;">$f^j_\delta$</span>
-	   the j-th observation of the underlying image <span style="font-size:80%;text-align:left;">
-	     $f$.</span></li>
-	 <li><span style="font-size:80%;text-align:left;">$k_j$</span> the PSF
-	   of the optical system which acquired<span
-	   style="font-size:80%;text-align:left;"> $f^j_\delta$.</span></li>
-	 <li><span style="font-size:80%;text-align:left;">$R(\cdot)$</span> the
+       <div style="font-size:75%;">
+	<p><span
+	    style="font-size:80%;text-align:left;">$$E(u) = \| u \ast
+	    k - f\|_1 + \|\nabla u \|_{2,1}$$</span></p>
+
+       <p class="fragment"><span
+	 style="font-size:80%;text-align:left;">$$E(u) = \sum_{j=1}^m C(u \ast
+	 k_j, f_j) + \lambda R(u)$$</span></p>
+       <ul>
+	 <li class="fragment"><span style="font-size:80%;text-align:left;">$f_j$</span>
+	   the j-th observation</span></li>
+	 <li class="fragment"><span style="font-size:80%;text-align:left;">$k_j$</span> the PSF
+	   of the corresponding optical system</span></li>
+	 <li class="fragment"><span style="font-size:80%;text-align:left;">$C(u
+	     \ast k, f)$</span> the cost function</li>
+	 <li class="fragment"><span style="font-size:80%;text-align:left;">$R(u)$</span> the
 	   regularization term with parameter <span
-	    style="font-size:80%;text-align:left;">$\lambda$.</span></li>
-	<li><span style="font-size:80%;text-align:left;">$T(\cdot,
-	    \cdot)$</span> the cost function.</li>
-	<li><span style="font-size:80%;text-align:left;">$u$</span> the reconstructed image.</li>
+	    style="font-size:80%;text-align:left;">$\lambda$</span></li>
+	 <li class="fragment"><span style="font-size:80%;text-align:left;">$u$</span> the reconstructed image</li>
        </ul>
+       </div>
      </section>
      <section>
-       <h4>Regularization Terms</h4>
+       <h4>Regularization Terms <span style="font-size:80%;">$R(u)$</span></h4>
        <div id="left" style="font-size:75%">
 	 <p>Total Variation [<a href="#/references">ROF92</a>]:</p>
-	 <p><span style="font-size:80%;">$$TV(u) := \min_u \{\|\nabla
+	 <p><span style="font-size:80%;">$$ R(u) = \min_u \{\|\nabla
 	   u\|_{2,1}\}$$</span></p>
 	 <ul>
 	   <li class="fragment" data-fragment-index="1">Piece-wise consistency.</li>
@@ -413,7 +416,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				      style="position:absolute;top:188px;left:244px;" />
 	   <div class="fragment" data-fragment-index="2" width="488px"
 	 style="position:absolute;top:368px;left:5px;font-size:large;width:478px"><p>Figure
-	 18: A reconstruction result with TV as regularization term plotted as a
+	 20: A reconstruction result with TV as regularization term plotted as a
 	 surface, where the gray-scale intensity is represented by the height.
 	 In the bottom right corner the underlying ground truth with smooth
 	 intensity transitions.</p></div>
@@ -421,9 +424,12 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        </div>
      </section>
      <section>
-       <h4>Regularization Terms</h4>
+       <h4>Regularization Terms <span style="font-size:80%;">$R(u)$</span></h4>
        <div id="left" style="font-size:75%">
 	 <p>TV-Huber [<a href="#/references">CP11</a>]:</p>
+	 <p class="fragment" data-fragment-index="1"><span style="font-size:80%;">$$ R(u) = \min_u \{\|\nabla
+	   u\|_{2,Huber}\}$$</span></p>
+	 <div class="fragment" data-fragment-index="2">
 	 <ul>
 	   <li>Huber-Norm [<a href="#/references">Hub73</a>]:</li>
 	 </ul>
@@ -431,22 +437,18 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	    \frac{\| x\|_2^2}{2\alpha} &, \| x\|_2 \leq \alpha\\
 	      \| x\|_2 - \frac{\alpha}{2} &, \| x\|_2 > \alpha
 		\end{cases}$$</span></p>
-	 <ul>
-	   <li class="fragment" data-fragment-index="1"><span
-			 style="font-size:80%">$\ell_1$</span>-norm is replaced
-	   by the Huber-Norm.</li>
-	 </ul>
+	 </div>
        </div>
        <div id="right">
 	 <div style="position:absolute;top:50px;width:488px; height:376px; margin:0 auto;">
-	   <img class="fragment" data-fragment-index="2" width="488px"
+	   <img class="fragment" data-fragment-index="3" width="488px"
 						  height="376px"
 	src="images/huber_mesh.png" style="position:absolute;top:0px;left:0;" />
-	   <img class="fragment" data-fragment-index="2" width="244px" height="188px" src="images/surface_groundtruth.png"
+	   <img class="fragment" data-fragment-index="3" width="244px" height="188px" src="images/surface_groundtruth.png"
 				      style="position:absolute;top:188px;left:244px;" />
-	   <div class="fragment" data-fragment-index="2" width="488px"
+	   <div class="fragment" data-fragment-index="3" width="488px"
 	 style="position:absolute;top:368px;left:5px;font-size:large;width:478px"><p>Figure
-	 19: A reconstruction result with TV-Huber as regularization term plotted as a
+	 21: A reconstruction result with TV-Huber as regularization term plotted as a
 	 surface, where the gray-scale intensity is represented by the height.
 	 In the bottom right corner the underlying ground truth with smooth
 	 intensity transitions.</p></div>
@@ -454,16 +456,15 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        </div>
      </section>
      <section>
-       <h4>Regularization Terms</h4>
+       <h4>Regularization Terms <span style="font-size:80%;">$R(u)$</span></h4>
        <div id="left" style="font-size:75%"> 
 	 <p>Total Generalized Variation [<a href="#/references">BKL</a>]:</p>
-	 <span><p style="font-size:80%">$$\begin{align}TGV^2(u) := \min_{u, w} \{ &\alpha
+	 <span><p style="font-size:80%">$$\begin{align}R(u) = \min_{u, w} \{ &\alpha
 	   \|\nabla u - w\|_{2,1} +\\
 	   &\beta \|Dw\|_{2,1}\}\end{align}$$</p></span>
 	 <ul>
 	   <li class="fragment" data-fragment-index="1">Second-order derivative.</li>
-	   <li class="fragment" data-fragment-index="3">Smooth transitions.</li>
-	   <li class="fragment" data-fragment-index="4">Computationally
+	   <li class="fragment" data-fragment-index="3">Computationally
 	     expensive.</li>
 	 </ul>
        </div>
@@ -476,7 +477,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				      style="position:absolute;top:188px;left:244px;" />
 	   <div class="fragment" data-fragment-index="2" width="488px"
 	 style="position:absolute;top:368px;left:5px;font-size:large;width:478px"><p>Figure
-	 20: A reconstruction result with TGV as regularization term plotted as a
+	 22: A reconstruction result with TGV as regularization term plotted as a
 	 surface, where the gray-scale intensity is represented by the height.
 	 In the bottom right corner the underlying ground truth with smooth
 	 intensity transitions.</p></div>
@@ -484,10 +485,10 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        </div>
      </section>
      <section>
-       <h4>Cost Functions</h4>
+       <h4>Cost Functions <span style="font-size:80%;">$C(u\ast k, f)$</span></h4>
        <div style="font-size:75%">
 	 <p>Squared <span style="font-size:80%">$\ell_2$</span>-Norm[<a href="#/references">CP11</a>]:</p>
-       <p><span style="font-size:80%">$$\min_u\left\{\frac{1}{2}\|u \ast k -
+       <p><span style="font-size:80%">$$C(u \ast k, f) = \min_u\left\{\frac{1}{2}\|u \ast k -
 	 f\|_2^2\right\}$$</span></p>
        <ul>
 	 <li>Differentiable, therefore widely used.</li>
@@ -496,10 +497,10 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        </div>
      </section>
      <section>
-       <h4>Cost Functions</h4>
+       <h4>Cost Functions <span style="font-size:80%;">$C(u\ast k, f)$</span></h4>
        <div style="font-size:75%">
 	 <p><span style="font-size:80%">$\ell_1$</span>-Norm[<a href="#/references">CP11</a>]:</p>
-       <p><span style="font-size:80%">$$\min_u\left\{\|u \ast k -
+       <p><span style="font-size:80%">$$C(u \ast k, f) = \min_u\left\{\|u \ast k -
 	 f\|_1\right\}$$</span></p>
        <ul>
 	 <li>Known to work well for Poisson and Gaussian noise.</li>
@@ -507,10 +508,10 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        </div>
      </section>
      <section>
-       <h4>Cost Functions</h4>
+       <h4>Cost Functions <span style="font-size:80%;">$C(u\ast k, f)$</span></h4>
        <div style="font-size:75%">
        <p>Kullback-Leibler Divergence[<a href="#/references">SCJ12</a>]:</p>
-       <p><span style="font-size:80%">$$D_{KL}(f|u\ast k) := \int_\Omega \left(
+       <p><span style="font-size:80%">$$C(u \ast k, f) = \int_\Omega \left(
 	 f\cdot log\left(\frac{f}{u
 	 \ast k}\right) - f + u \ast k \right) + \delta_{[0,1]}(u \ast k)
 	 $$</span></p>
@@ -535,26 +536,34 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <h4>ImageJ-Ops</h4>
      </section>
   </section>-->
-   <section>
-     <h3>Evaluation</h3>
-     <div style="font-size:75%;">
-       <p>Regularization Terms:</p>
-       <ul>
-	 <li>Total Variation</li>
-	 <li>TV-Huber</li>
-	 <li>Total Generalized Variation</li>
-       </ul>
-       <p>Cost Functions:</p>
-       <ul>
-	 <li>Squared <span style="font-size:80%;">$\ell_2$</span>-Norm</li>
-	 <li><span style="font-size:80%;">$\ell_1$</span>-Norm</li>
-	 <li>Kullback-Leibler Divergence</li>
-       </ul>
-       <p>Compared to Richardson-Lucy multiview deconvolution [<a
-	    href="#/references">PAS+14</a>] in terms of Peak-Signal to Noise
-	  Ratio (PSNR) and runtime.</p>
-     </div>
-   </section>
+  <section>
+    <h3>Evaluation</h3>
+    <div style="font-size:75%;">
+      <div class="fragment" id="left">
+	<p>Regularization Terms <span style="font-size:80%;">$R(u)$</span>:</p>
+	<ul>
+	  <li>Total Variation</li>
+	  <li>TV-Huber</li>
+	  <li>Total Generalized Variation</li>
+	</ul>
+      </div>
+      <div class="fragment" id="right">
+	<p>Cost Functions <span style="font-size:80%;">$C(u\ast k, f)$</span>:</p>
+	<ul>
+	  <li>Squared <span style="font-size:80%;">$\ell_2$</span>-Norm</li>
+	  <li><span style="font-size:80%;">$\ell_1$</span>-Norm</li>
+	  <li>Kullback-Leibler Divergence</li>
+	</ul>
+      </div>
+      <div class="fragment" style="position:absolute; top:350px;">
+	<p>Compared to Richardson-Lucy multiview deconvolution [<a
+	     href="#/references">PAS+14</a>]:</p>
+	<span style="font-size:80%;">$$P(u|f_{1,\dots,j}) =
+	  \frac{P(f_{1,\dots,j}|u)P(u)}{P(u \ast k_{1,\dots,j})}$$</span>
+	<p style="position:absolute; top:200px;">In terms of Peak-Signal to Noise Ratio (PSNR) and runtime.</p>
+      </div>
+    </div>
+  </section>
    <section>
      <h3>Experimental Setup</h3>
      <section>
@@ -577,21 +586,21 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		height="300px" src="images/groundtruth.png" style="position:absolute;top:0;left:0;" />
 		<div class="fragment" data-fragment-index="1" width="300px"
 		  style="position:absolute;top:312px;left:5px;font-size:large;width:290px"><p>Figure
-		  21: The ground truth image used for the evaluation.</p></div>
+		  23: The ground truth image used for the evaluation.</p></div>
 	      </span>
 	      <span class="fragment fade-out" data-fragment-index="3">
 		<img class="fragment" data-fragment-index="2" width="300px"
 		height="300px" src="images/gtConv.png" style="position:absolute;top:0;left:0;" />
 		<div class="fragment" data-fragment-index="2" width="300px"
 		  style="position:absolute;top:312px;left:5px;font-size:large;width:290px"><p>Figure
-		  22: Ground truth convolved with PSF.</p></div>
+		  24: Ground truth convolved with PSF.</p></div>
 	      </span>
 	      <span class="fragment fade-out" data-fragment-index="4">
 		<img class="fragment" data-fragment-index="3" width="300px"
 						height="300px" src="images/gtDS.png" style="position:absolute;top:0;left:0;" />
 		<div class="fragment" data-fragment-index="3" width="300px"
 						style="position:absolute;top:312px;left:5px;font-size:large;width:290px"><p>Figure
-						23: Downsampled along z-axis to
+						25: Downsampled along z-axis to
 						simulate light sheets.</p></div>
 	      </span>
 	      <span class="fragment fade-out" data-fragment-index="5">
@@ -599,14 +608,14 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		height="300px" src="images/gtNoise.png" style="position:absolute;top:0;left:0;" />
 		<div class="fragment" data-fragment-index="4" width="300px"
 		  style="position:absolute;top:312px;left:5px;font-size:large;width:290px"><p>Figure
-		  24: Apply noise.</p></div>
+		  26: Apply noise.</p></div>
 	      </span>
 	      <span class="fragment" data-fragment-index="5">
 		<img class="fragment" data-fragment-index="5" width="300px"
 		height="300px" src="images/gtInterp.png" style="position:absolute;top:0;left:0;" />
 		<div class="fragment" data-fragment-index="5" width="300px"
 						style="position:absolute;top:312px;left:5px;font-size:large;width:290px"><p>Figure
-						25: Volume is scaled to isotropic
+						27: Volume is scaled to isotropic
 						resolution.</p></div>
 	      </span>
 	    </div>
@@ -642,7 +651,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						26: <span
+						28: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.1)$.</span></p></div> 
        <img width="150px"
@@ -652,7 +661,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						27: <span
+						29: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.01)$.</span></p></div>
        <img width="150px"
@@ -662,7 +671,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						28: <span
+						30: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.001)$.</span></p></div>
        </div>
@@ -674,7 +683,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						29: SNR = 10.</p></div> 
+						31: SNR = 10.</p></div> 
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_100_sample_factor_1_1.png"
@@ -682,7 +691,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						30: SNR = 100.</p></div>
+						32: SNR = 100.</p></div>
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_1000_sample_factor_1_1.png"
@@ -690,7 +699,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						31: SNR = 1000.</p></div>
+						33: SNR = 1000.</p></div>
 
 
 
@@ -707,7 +716,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						32: <span
+						34: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.1)$.</span></p></div> 
        <img width="150px"
@@ -717,7 +726,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						33: <span
+						35: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.01)$.</span></p></div>
        <img width="150px"
@@ -727,7 +736,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						34: <span
+						36: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.001)$.</span></p></div>
        </div>
@@ -739,7 +748,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						35: SNR = 10.</p></div> 
+						37: SNR = 10.</p></div> 
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_100_sample_factor_2_1.png"
@@ -747,7 +756,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						36: SNR = 100.</p></div>
+						38: SNR = 100.</p></div>
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_1000_sample_factor_2_1.png"
@@ -755,7 +764,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						37: SNR = 1000.</p></div>
+						39: SNR = 1000.</p></div>
 
 
 
@@ -772,7 +781,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						38: <span
+						40: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.1)$.</span></p></div> 
        <img width="150px"
@@ -782,7 +791,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						39: <span
+						41: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.01)$.</span></p></div>
        <img width="150px"
@@ -792,7 +801,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						40: <span
+						42: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.001)$.</span></p></div>
        </div>
@@ -804,7 +813,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						41: SNR = 10.</p></div> 
+						43: SNR = 10.</p></div> 
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_100_sample_factor_4_1.png"
@@ -812,7 +821,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						42: SNR = 100.</p></div>
+						44: SNR = 100.</p></div>
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_1000_sample_factor_4_1.png"
@@ -820,7 +829,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						43: SNR = 1000.</p></div>
+						45: SNR = 1000.</p></div>
 
 
 
@@ -837,7 +846,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						44: <span
+						46: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.1)$.</span></p></div> 
        <img width="150px"
@@ -847,7 +856,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						45: <span
+						47: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.01)$.</span></p></div>
        <img width="150px"
@@ -857,7 +866,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						46: <span
+						48: <span
 						  style="font-size:80%">$(\mu =
 						  0.0, \sigma = 0.001)$.</span></p></div>
        </div>
@@ -869,7 +878,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:5px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						47: SNR = 10.</p></div> 
+						49: SNR = 10.</p></div> 
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_100_sample_factor_8_1.png"
@@ -877,7 +886,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:205px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						48: SNR = 100.</p></div>
+						50: SNR = 100.</p></div>
        <img width="150px"
 		height="150px"
 		src="images/views/SNR_1000_sample_factor_8_1.png"
@@ -885,7 +894,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <div width="150px"
 						style="position:absolute;top:162px;left:405px;font-size:large;width:140px"><p
 						style="text-align:left;">Figure
-						49: SNR = 1000.</p></div>
+						51: SNR = 1000.</p></div>
 
 
 
@@ -1043,7 +1052,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		height="532px" src="images/gaussianNoise_sigma_0.1_sf1.png" style="position:absolute;top:0;left:0;" />
 	<div width="692px"
 	  style="position:absolute;top:450px;left:5px;font-size:large;width:682px"><p>Figure
-						50: Performance visualization of
+						52: Performance visualization of
 	the best performing variational multiview deconvolution model and the
 	Richardson-Lucy multiview deconvolution.</p></div> 
       </div>
@@ -1057,7 +1066,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		height="532px" src="images/gaussianNoise_sigma_0.01_sf4.png" style="position:absolute;top:0;left:0;" />
 	<div width="692px"
 	  style="position:absolute;top:450px;left:5px;font-size:large;width:682px"><p>Figure
-						51: Performance visualization of
+						53: Performance visualization of
 	the best performing variational multiview deconvolution model and the
 	Richardson-Lucy multiview deconvolution.</p></div> 
       </div>
@@ -1071,7 +1080,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		height="532px" src="images/gaussianNoise_sigma_0.001_sf2.png" style="position:absolute;top:0;left:0;" />
 	<div width="692px"
 	  style="position:absolute;top:450px;left:5px;font-size:large;width:682px"><p>Figure
-						52: Performance visualization of
+						54: Performance visualization of
 	the best performing variational multiview deconvolution model and the
 	Richardson-Lucy multiview deconvolution.</p></div> 
       </div>
@@ -1213,7 +1222,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		height="532px" src="images/poissonNoise_SNR10_sf1.png" style="position:absolute;top:0;left:0;" />
 	<div width="692px"
 	  style="position:absolute;top:450px;left:5px;font-size:large;width:682px"><p>Figure
-						53: Performance visualization of
+						55: Performance visualization of
 	the best performing variational multiview deconvolution model and the
 	Richardson-Lucy multiview deconvolution.</p></div> 
       </div>
@@ -1226,7 +1235,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		height="532px" src="images/poissonNoise_SNR100_sf8.png" style="position:absolute;top:0;left:0;" />
 	<div width="692px"
 	  style="position:absolute;top:450px;left:5px;font-size:large;width:682px"><p>Figure
-						54: Performance visualization of
+						56: Performance visualization of
 	the best performing variational multiview deconvolution model and the
 	Richardson-Lucy multiview deconvolution.</p></div> 
       </div>
@@ -1239,7 +1248,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		height="532px" src="images/poissonNoise_SNR1000_sf1.png" style="position:absolute;top:0;left:0;" />
 	<div width="692px"
 	  style="position:absolute;top:450px;left:5px;font-size:large;width:682px"><p>Figure
-						55: Performance visualization of
+						57: Performance visualization of
 	the best performing variational multiview deconvolution model and the
 	Richardson-Lucy multiview deconvolution.</p></div> 
       </div>
@@ -1354,22 +1363,23 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        </table>
        <div style="position:absolute;left:120px;width:720px;"><p style="font-size:50%">Table 3: Benchmark results of the different multiview
 	 deconvolution algorithms. The benchmarks were run on a dataset
-	 consisting of two views of size <span style="font-size:75%;">$150px \times
-	   150px \times 150px$</span> and PSFs of size <span
-					style="font-size:75%;">$21px \times 21px
-					\times 51px$.</span></p></div>
+	 consisting of two views of size 150px <span
+	   style="font-size:75%;">$\times$</span> 150px <span
+	   style="font-size:75%;">$\times$</span> 150px and PSFs of size 21px
+	 <span style="font-size:75%;">$\times$</span> 21px <span
+	   style="font-size:75%;">$\times$</span> 51px. [minutes:seconds.milliseconds]</p></div>
      </section>
    </section>
    <section>
      <h3>Summary</h3>
      <ul style="font-size:75%">
-       <li>Variational multiview deconvolution models perform as good as
+       <li class="fragment">Variational multiview deconvolution models perform as good as
 	 Richardson-Lucy multiview deconvolution in terms of PSNR.</li>
-       <li>For heavily distorted image data the variational multiview
+       <li class="fragment">For heavily distorted image data the variational multiview
 	 deconvolution models generate better reconstruction results.</li>
-       <li>The gain in image quality is paid by a considerably increased
+       <li class="fragment">The gain in image quality is paid by a considerably increased
 	 execution time.</li>
-       <li>TV-Huber as regularization term and <span
+       <li class="fragment">TV-Huber as regularization term and <span
 	 style="font-size:80%">$\ell_1$</span>-norm as cost function
 	 should be used in the variational model.</li>
      </ul>
@@ -1377,14 +1387,14 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
    <section>
      <h3>Future Work</h3>
      <ul style="font-size:75%">
-       <li>Merge First-Order Primal-Dual Solver into ImageJ-Ops.</li>
-       <li>Add GPU operations to ImageJ-Ops.</li>
-       <li>Add further regularization terms:</li>
+       <li class="fragment" data-fragment-index="1">Merge First-Order Primal-Dual Solver into ImageJ-Ops.</li>
+       <li class="fragment" data-fragment-index="2">Add GPU operations to ImageJ-Ops.</li>
+       <li class="fragment" data-fragment-index="3">Add further regularization terms:</li>
        <ul>
-	 <li type="circle">Hessian-Schatten Norm</li>
-	 <li type="circle">Curvelet based</li>
+	 <li class="fragment" data-fragment-index="3" type="circle">Hessian-Schatten Norm</li>
+	 <li class="fragment" data-fragment-index="3" type="circle">Curvelet based</li>
        </ul>
-       <li>Integrate weights for the different views.</li>
+       <li class="fragment" data-fragment-index="4">Integrate weights for the different views.</li>
      </ul>
    </section>
    <section id="references">
@@ -1452,7 +1462,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
       style="position:absolute;top:0px;left:0px" />
 	 <div width="692px"
 						style="position:absolute;top:409px;left:5px;font-size:large;width:692px"><p>Figure
-						56: Mapping of the PSNRs from the
+						58: Mapping of the PSNRs from the
 						reconstructed images and the
 						input views, downsampled by
 						factor one and distorted by
@@ -1462,6 +1472,76 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 						  0, \sigma = 0.1$</span>), to a
 						fixed voxel value change.</p></div>
        </div>
+     </section>
+     <section>
+       <h4>First-Order Primal-Dual Algorithm</h4>
+       <table style="position:absolute;left:0px;font-size:75%">
+	 <tr>
+	   <td>Primal-Problem</td>
+	   <td><span style="font-size:80%;text-align:left;">$$\min_u \{F(K(u)) + G(u)\}$$</span></td>
+	 </tr>
+	 <tr>
+	   <td>Primal-Dual-Problem</td>
+	   <td><span style="font-size:80%;text-align:left;">$$\min_u \max_p \{\langle K(u), p\rangle + G(u) - F^\ast(p)\}$$</span></td>
+	 </tr>
+       </table>
+       <div style="position:absolute;left:15px;top:250px;width:900px;">
+	 <p style="font-size:75%">Solver [<a href="#/references">CP11</a>]:</p>
+	 <div style="position:absolute;left:20px;top:40px;width:900px;">
+	   <p style="font-size:75%"><span style="font-size:80%;text-align:left;">$p_{n+1} = \text{prox}_{\sigma F^\ast}(p_n +
+	     \sigma K \bar{u}_n)$</span></p>
+	   <p style="font-size:75%"><span
+	     style="font-size:80%;text-align:left;">$u_{n+1} = \text{prox}_{\tau
+	     G}(u_n - \tau K^\ast
+	     p_{n+1})$</span></p>
+	   <p style="font-size:75%"><span style="font-size:80%;text-align:left;">$\bar{u}_{n+1} = u_{n+1} +
+       \theta(u_{n+1} - u_n)$</span></p>
+	   <p style="font-size:75%">Initialize <span style="font-size:80%">$p_0,
+	     u_0$,</span> arbitrarily, set <span style="font-size:80%">$\bar{u}_0 =
+	     u_0$</span> and choose step sizes <span style="font-size:80%">$\sigma,
+	     \tau > 0$</span> and  <span style="font-size:80%">$\theta \in [0,
+	     1]$.</span>
+	 </div>
+       </div>
+     </section>
+     <section>
+       <h4>Convex Conjugate</h4>
+       <p style="font-size:75%">For <span style="font-size:80%">$f \in conv(\mathcal{V})$</span> the
+       convex conjugate <span style="font-size:80%">$f^\ast : \mathcal{V}^\ast
+	 \rightarrow \mathbb{R} \cup \{\infty\}$</span> is defined as:</p>
+       <p style="font-size:75%"><span style="font-size:80%;text-align:left;">$$f^\ast (\phi) := \sup_{v \in \mathcal{V}} \{\langle v, \phi \rangle
+	 - f(v)\}$$</span></p>
+     </section>
+     <section>
+       <h4>Proximity Operator</h4>
+       <p style="font-size:75%">The proximity operator <span
+	  style="font-size:80%">$\text{prox}_{\tau H}(x)$</span> for a convex
+	functional <span style="font-size:80%">$H$</span> and step size <span
+		  style="font-size:80%">$\tau$</span> is defined as:</p>
+       <p style="font-size:75%"><span style="font-size:80%;text-align:left;">$$\text{prox}_{\tau H}(x) := \min_y \left\{
+	 \frac{(y - x)^2}{2\tau} + H(y)\right\}$$</span></p>
+       <ul style="font-size:75%;">
+	 <li>Can be difficult to calculate.</li>
+	 <li>More robust than the gradient regarding the step size.</li>
+	 <li>Can be calculated for non-differentiable objectives.</li>
+       </ul>
+     </section>
+     <section>
+       <h4>Adjoint Operator</h4>
+       <p style="font-size:75%">The adjoint operator <span
+	  style="font-size:80%">$K^\ast : \mathcal{W} \rightarrow
+	  \mathcal{V}$</span> of the linear operator <span
+   style="font-size:80%">$K: \mathcal{V} \rightarrow \mathcal{W}$</span> is defined as:</p>
+       <p style="font-size:75%"><span style="font-size:80%;text-align:left;">$$(Kx, y)_\mathcal{W} = (x, K^\ast
+	 y)_\mathcal{V} \: \forall x \in \mathcal{V}, y \in \mathcal{W}$$</span></p>
+       <ul style="font-size:75%;">
+	 <li><span style="font-size:80%;">$(\nabla u, v) =
+	     (u,-\text{div}(v))$</span></li>
+	 <li><span style="font-size:80%;">$(u \ast k, v) = (u, v \ast
+	     \bar{k})$,</span> where <span
+	    style="font-size:80%;">$\bar{k}$</span> is the flipped kernel <span
+     style="font-size:80%;">$k$.</span></li>
+       </ul>
      </section>
 
    <p id="footer" style="position:absolute;bottom:-30px;left:50%;width:600px;margin-left:-300px;font-size:medium;visibility:visible;text-align:center;">Master Thesis - An Evaluation of Variational Models for 3D Multiview Deconvolution</p>
