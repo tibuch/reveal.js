@@ -152,9 +152,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <h4>Bead-Based Multiview Registration</h4>
        <div style="font-size:75%">
 	 <ol style="position:absolute;left:20px">
-	   <li class="fragment" data-fragment-index="1">Point cloud extraction.</li>
-	   <li class="fragment" data-fragment-index="2">Identification of corresponding points.</li>
-	   <li class="fragment" data-fragment-index="3">Computation of transformation.</li>
+	   <li class="fragment" data-fragment-index="1">Point cloud extraction</li>
+	   <li class="fragment" data-fragment-index="2">Identification of corresponding points</li>
+	   <li class="fragment" data-fragment-index="3">Computation of transformation</li>
 	 </ol>
        </div>
        <div style="position:absolute; width:772px; height:500px; top:240px;">
@@ -184,7 +184,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 						  12: Transformation to a global
 						  coordinate system.</p></div>
 	 </div>
-	 <div width="732px"
+	 <div class="fragment" data-fragment-index="1" width="732px"
        style="position:absolute;top:265px;left:5px;font-size:small;width:732px"><p>Source:
        Bachelor Arbeit -  Optimierte Registrierung für diSPIM im Hochdurchsatz
        (Tim-Oliver Buchholz, 2016)</p></div>
@@ -196,7 +196,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	 <ul style="position:absolute;left:20px">
 	   <li class="fragment" data-fragment-index="1">Fusion</li>
 	   <li class="fragment" data-fragment-index="2">Multiview
-	     Deconvolution with known PSF.</li>
+	     Deconvolution with known PSF</li>
 	 </ul>
        </div>
        <div style="position:absolute;top:200px;height:400px;width:600px">
@@ -247,9 +247,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	 </div>
        </div>
        <ul style="position:absolute;top:430px;font-size:75%;">
-	 <li class="fragment">Camera shaking.</li>
+	 <li class="fragment">Camera shaking</li>
 	 <li class="fragment">Diffraction artifacts introduced by the optical
-	   system (PSF).</li>
+	   system (PSF)</li>
        </ul>
      </section>
      <!--<section>
@@ -404,8 +404,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	 <p><span style="font-size:80%;">$$ R(u) = \min_u \{\|\nabla
 	   u\|_{2,1}\}$$</span></p>
 	 <ul>
-	   <li class="fragment" data-fragment-index="1">Piece-wise consistency.</li>
-	   <li class="fragment" data-fragment-index="3">Stair-casing artifacts.</li>
+	   <li class="fragment" data-fragment-index="1">Piece-wise consistency</li>
+	   <li class="fragment" data-fragment-index="3">Stair-casing artifacts</li>
 	 </ul>
        </div>
        <div id="right">
@@ -463,9 +463,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	   \|\nabla u - w\|_{2,1} +\\
 	   &\beta \|Dw\|_{2,1}\}\end{align}$$</p></span>
 	 <ul>
-	   <li class="fragment" data-fragment-index="1">Second-order derivative.</li>
+	   <li class="fragment" data-fragment-index="1">Second-order derivative</li>
 	   <li class="fragment" data-fragment-index="3">Computationally
-	     expensive.</li>
+	     expensive</li>
 	 </ul>
        </div>
        <div id="right">
@@ -491,8 +491,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <p><span style="font-size:80%">$$C(u \ast k, f) = \min_u\left\{\frac{1}{2}\|u \ast k -
 	 f\|_2^2\right\}$$</span></p>
        <ul>
-	 <li>Differentiable, therefore widely used.</li>
-	 <li>Works well with Gaussian noise.</li>
+	 <li>Differentiable, therefore widely used</li>
+	 <li>Works well with Gaussian noise</li>
        </ul>
        </div>
      </section>
@@ -503,7 +503,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <p><span style="font-size:80%">$$C(u \ast k, f) = \min_u\left\{\|u \ast k -
 	 f\|_1\right\}$$</span></p>
        <ul>
-	 <li>Known to work well for Poisson and Gaussian noise.</li>
+	 <li>Known to work well for Poisson and Gaussian noise</li>
        </ul>
        </div>
      </section>
@@ -516,10 +516,10 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	 \ast k}\right) - f + u \ast k \right) + \delta_{[0,1]}(u \ast k)
 	 $$</span></p>
        <ul>
-	 <li>Is only a measure, not a metric.</li>
+	 <li>Is only a measure, not a metric</li>
 	 <li>Describes how much information is lost if <span
 		style="font-size:80%">$u \ast k$</span> is used to
-	      approximate <span style="font-size:80%">$f$.</span></li>
+	      approximate <span style="font-size:80%">$f$</span></li>
        </ul>
        </div>
      </section>
@@ -570,13 +570,13 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <h4>Image Formation Process</h4>
        <div style="font-size:75%" id="left">
 	    <ul>
-	      <li class="fragment" data-fragment-index="1">Ground truth image.</span></li>
-	      <li class="fragment" data-fragment-index="2">Convolved with a PSF.</li>
+	      <li class="fragment" data-fragment-index="1">Ground truth image</span></li>
+	      <li class="fragment" data-fragment-index="2">Convolved with a PSF</li>
 	      <li class="fragment" data-fragment-index="3">Downsampled along
-		z-axis.</li>
-	      <li class="fragment" data-fragment-index="4">Apply noise.</li>
+		z-axis</li>
+	      <li class="fragment" data-fragment-index="4">Apply noise</li>
 	      <li class="fragment" data-fragment-index="5">Upscaled to isotropic
-		resolution.</li>
+		resolution</li>
 	    </ul>
 	  </div>
 	  <div id="right">
@@ -911,7 +911,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	<li>TGV Parameters: <span style="font-size:80%">$(\alpha, \beta) \in [(0.01, 0.02), (0.1, 0.2),
 	    \dots, (1.0, 2.0)]$</span></li>
 	<li>Experimental setup is available under</br>
-	  github.com/tibuch/FOPD-Solver/tree/experiments.</li>
+	  github.com/tibuch/FOPD-Solver/tree/experiments</li>
       </ul>
      </section>
    </section>
@@ -1387,14 +1387,14 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
    <section>
      <h3>Future Work</h3>
      <ul style="font-size:75%">
-       <li class="fragment" data-fragment-index="1">Merge First-Order Primal-Dual Solver into ImageJ-Ops.</li>
-       <li class="fragment" data-fragment-index="2">Add GPU operations to ImageJ-Ops.</li>
+       <li class="fragment" data-fragment-index="1">Merge First-Order Primal-Dual Solver into ImageJ-Ops</li>
+       <li class="fragment" data-fragment-index="2">Add GPU operations to ImageJ-Ops</li>
        <li class="fragment" data-fragment-index="3">Add further regularization terms:</li>
        <ul>
 	 <li class="fragment" data-fragment-index="3" type="circle">Hessian-Schatten Norm</li>
 	 <li class="fragment" data-fragment-index="3" type="circle">Curvelet based</li>
        </ul>
-       <li class="fragment" data-fragment-index="4">Integrate weights for the different views.</li>
+       <li class="fragment" data-fragment-index="4">Integrate weights for the different views</li>
      </ul>
    </section>
    <section id="references">
@@ -1521,9 +1521,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
        <p style="font-size:75%"><span style="font-size:80%;text-align:left;">$$\text{prox}_{\tau H}(x) := \min_y \left\{
 	 \frac{(y - x)^2}{2\tau} + H(y)\right\}$$</span></p>
        <ul style="font-size:75%;">
-	 <li>Can be difficult to calculate.</li>
-	 <li>More robust than the gradient regarding the step size.</li>
-	 <li>Can be calculated for non-differentiable objectives.</li>
+	 <li>Can be difficult to calculate</li>
+	 <li>More robust than the gradient regarding the step size</li>
+	 <li>Can be calculated for non-differentiable objectives</li>
        </ul>
      </section>
      <section>
@@ -1540,7 +1540,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	 <li><span style="font-size:80%;">$(u \ast k, v) = (u, v \ast
 	     \bar{k})$,</span> where <span
 	    style="font-size:80%;">$\bar{k}$</span> is the flipped kernel <span
-     style="font-size:80%;">$k$.</span></li>
+     style="font-size:80%;">$k$</span></li>
        </ul>
      </section>
 
